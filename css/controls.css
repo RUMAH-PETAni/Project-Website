@@ -121,6 +121,7 @@
   text-decoration: none;
   color: black;
   border: 1px solid #777777;
+  hover: 1px solid #777777;
   background-color: white;
   padding: 13px;
   display: flex;
@@ -136,6 +137,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.custom-button-flat:hover {
+  background-color: #e1e1e1;
 }
 
 .custom-button-flat.large {
