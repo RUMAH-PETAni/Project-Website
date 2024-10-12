@@ -323,6 +323,7 @@
   position: relative;
   display: block;
   cursor: pointer;
+  width: fit-content;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -451,7 +452,8 @@
   background-image: none;
   padding: 0;
   margin: 0;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 48px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -566,7 +568,8 @@
   border: 1px solid #7d7d7d;
   background: #7d7d7d none;
   color: white;
-  border-radius: 2px;
+  /* border-radius: 2px; */
+  border-radius: 48px;
   outline: none;
   margin: 1.2em 0 0 1.2em;
 }
