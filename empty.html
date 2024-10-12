@@ -13,7 +13,6 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/typewrite.js"></script>
   <style>
     .menu-index {
       color: rgb(255, 255, 255) !important;
@@ -24,7 +23,28 @@
 </head>
 
 <body>
-  <div class="custom-menu-container"></div>
+  <div class="custom-menu-container">
+    <div class="menu">
+      <div class="menu-table flex-row-space-between">
+        <div class="logo flex-row-center">
+          <a href="index.html">
+            <img src="assets/logo.svg">
+          </a>
+        </div>
+            <div class="custom-dropdown2 large">
+              <a  tabindex="0"><span>Menu</span></a>
+              <div>
+                <a href="#"></a>
+                <a href="index.html">Beranda</a>
+                <a href="project.html">Proyek</a>
+                <a href="insight.html#">Insight</a>
+                <a href="gallery.html">Galeri</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="content-container">
     <div class="content">
       <div class="content-table flex-column">
@@ -34,22 +54,22 @@
         </div>
         <div class="flex-row">
           <div class="flex-item flex-column">
-            <h2>
-              <a class="typewrite" data-period="2000" data-type='[ "UNDER CONSTRUCTIONS!" ]'>
-                <span class="wrap"></span>
-              </a>
-            </h2>
+            <marquee width="100%" direction="left" height="100%">
+            <h0>
+              UNDER CONSTRUCTIONS!
+            </h0>
+            </marquee>
             <hr>
             <p class="text">
               Mohon maaf atas ketidaknyamanannya, karena saat ini kami sedang dalam tahap pengembangan aplikasi. 
-            </br>Anda dapat <a href="contact.html">menghubungi kami</a> untuk informasi lebih lanjut.
+            </br>Anda dapat <a href="mailto:rmh.petani@gmail.com">menghubungi kami</a> untuk informasi lebih lanjut.
             </p>
           </div>
         </div>
         <div class="flex-row">
           <div class="flex-item flex-column">
             <div class="control-group">
-              <a class="custom-button-flat stretch-on-mobile pulse-black" href="contact.html">
+              <a class="custom-button-flat stretch-on-mobile pulse-black" href="mailto:rmh.petani@gmail.com">
                 <img src="img/mail.png"><span>Hubungi kami</span>
               </a>        
           </div>
