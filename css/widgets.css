@@ -323,7 +323,6 @@
   position: relative;
   display: block;
   cursor: pointer;
-  width: fit-content;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
