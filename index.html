@@ -10,19 +10,20 @@
   <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/widgets.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/parallax.css" media="screen" rel="stylesheet" type="text/css" />
   <link rel="icon" type="image/x-icon" href="assets/icon.png">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
   <script src="js/widgets.js"></script>
   <script src="js/util.js"></script>
   <script src="js/custom.js"></script>
+  <script src="js/animateIfInView.js"></script>
   <style>
     .menu-index {
-      color: rgb(255, 255, 255) !important;
+      color: rgb(142, 202, 230) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
     }
@@ -56,48 +57,98 @@
   <div class="content-container">
     <!-------------------------------------------------------------------------------------------->
     <!--Start Header-->
-      <div class="custom-banner" style="background: url('assets/aerial.png') no-repeat center; background-size: cover; height: 500px;">
-      <!-- <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="custom-banner" style="background: url('assets/') no-repeat center; background-size: auto; height: 50px;">
+      <!-- <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5);">
         <div class="flex-row">
           <div class="flex-item flex-column text-right">
-            <h0>
-              <a class="typewrite" data-period="2000" data-type='[ "#PETAni :","Penjaga Tatanan Negara Indonesia" ]'>
-                <span class="wrap"></span>
-              </a>
-            </h0>
-            <p class="text">
+            <p class="text"><em>"Melalui data dan informasi geospasial kami mendorong komunitas petani untuk dapat 
+              mendayagunakan teknologi dalam dalam pengelolaan sumber daya alam yang lestari"</em>
             </p>
           </div>
         </div>
       </div> -->
     </div>
- 
-    <!-- <div class="banner" style="background: url('assets/aerial.png') no-repeat center; background-size: cover; height: 500px;"></div> -->
+    <div class="content animate">
+      <div class="content-table flex-column">
+        <div class="flex-row">
+          <!-- <a class="image adaptive-image" style="background-image: url('assets/mapgif.gif'); min-height: 350px;"></a>           -->
+          <div class="flex-row">
+            <div class="flex-item flex-item-stretch flex-column">
+              <img class="custom-image center" src="assets/small.gif">
+            </div>
+          </div>
+          <div class="flex-item flex-item-stretch flex-column">
+            <h2>RUMAH PETAni</h2>
+            <hr>
+            <p class="text">
+              Merupakan sebuah gerakan komunitas dengan misi bersama 
+              untuk mewujudkan hubungan yang seimbang antara manusia dengan alam.
+              Semangat kami dalam melakukan inovasi sebagai bentuk kontribusi kepada komunitas petani 
+              agar dapat mengelola dan memanfaatkan potensi sumber daya alam secara bertanggung jawab dan berkelanjutan.
+            </p>
+          </div>
+        </div>    
+      </div>
+    </div>
+
+    <!--End Header-->
+    <div class="content animate">
+      <div class="content-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-item-stretch flex-column">
+            <h2>Tim Kami</h2>
+            <hr>
+            <p class="text">
+              Didukung oleh orang-orang yang telah berpengalaman dibidangnya, 
+              mulai dari pakar pemetaan, peneliti, penggiat sosial masyarakat hingga praktisi agroforestri.
+              <br>Ide dasar kami adalah mengintegrasikan teknologi digital terutama dalam pemanfaatan 
+              data dan informasi yang tepat guna agar dapat memberikan manfaat dan dampak yang positif.
+            </p>
+          </div>
+          <div class="flex-item flex-item-stretch flex-column">
+            <div class="gallery-team">
+              <div class="img-box1"><h3>Mapping Expert</h3>
+              </div>
+              <div class="img-box1"><h3>Data Scientist</h3>
+              </div>
+            </div>
+            <div class="gallery-team">
+              <div class="img-box2"><h3>Social Activist</h3>
+              </div>
+              <div class="img-box2"><h3>Local Farmer</h3>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </div>
     <div class="custom-banner">
       <div class="banner-table flex-column">
         <div class="flex-row">
-          <div class="flex-item flex-column text-italic">
-            <h3 class="add-top-margin-small"></h3>
-            <p class="text"> "Melalui data dan informasi geospasial kami mendorong komunitas petani untuk dapat 
-              mendayagunakan teknologi dalam dalam pengelolaan sumber daya alam yang lestari"
-            </p>
+          <div class="flex-item flex-column">
+            <marquee width="100%" direction="left" height="100%">
+              <h3 class="add-top-margin-small">&middot karena kami percaya bahwa #PETAni adalah Penjaga Tatanan Negara Indonesia &middot
+              </h3>
+            </marquee>
           </div>
         </div>
       </div>
     </div>
-    <!--End Header-->
+    <div id="parallax-world-of-ugg">   
+      <section>
+        <div class="parallax-one">
+        </div>
+      </section>
+    </div>
     <!-------------------------------------------------------------------------------------------->
     <div class="custom-banner">
       <div class="banner-table flex-column">
         <div class="flex-row">
           <div class="flex-item flex-column">
-            <p class="text text-italic">
-              <span class="highlight-text">RUMAH PETAni</span> sebagai sebuah platform digital untuk kepentingan bersama dengan tujuan membuat, menyimpan serta menyediakan data dan informasi 
-              guna mendukung kesejahteraan hidup masyarakat serta keberlanjutan pengelolaan potensi sumber daya alam untuk masa depan yang lebih baik.
+            <p class="text text-small text-italic">
+              <span class="highlight-text">Disclaimer</span>: platform digital ini dibuat untuk kepentingan publikasi dengan tujuan membuat, mengumpulkan, menyimpan serta menyediakan data dan informasi 
+              guna mendukung keberlanjutan pengelolaan potensi sumber daya alam untuk masa depan yang lebih baik.
             </p>
-            <marquee width="100%" direction="left" height="100%">
-              <h2 class="add-top-margin-small">&middot karena kami percaya bahwa #PETAni adalah Penjaga Tatanan Negara Indonesia &middot
-              </h2></marquee>
           </div>
         </div>
       </div>
