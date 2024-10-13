@@ -261,6 +261,9 @@ hr {
   min-width: 300px;
 }
 
+
+
+
 .content {
   position: relative;
   margin: 0 auto;
@@ -270,6 +273,20 @@ hr {
   line-height: 1.5;
   max-width: 900px;
   overflow-x: auto;
+}
+@keyframes entrance {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.content.in-view {
+  animation: entrance 2s ease-out 0s 1 normal forwards;
 }
 
 .content p a,
@@ -457,6 +474,11 @@ hr {
   -ms-user-select: none;
   user-select: none;
   display: flex;
+}
+
+.scrollable-image.center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .scrollable-image.center {

@@ -19,6 +19,24 @@ h0a {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+.custom-image {
+  border-radius: 48px;
+  border: 1px solid #000;
+  width: 100%;
+  margin: 15px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+}
+
+.custom-image.center {
+  align-self: center;
+}
+
 .custom-menu-container {
   z-index: 2;
   position: fixed;
@@ -312,5 +330,115 @@ h0a {
   display: inline-block;
   box-sizing: border-box;
 
+}
+
+.container-team{
+  widht: 430px;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  align-items:start;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.gallery1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-team{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-box0{
+  width: 430px;
+  height:270px;
+  margin:  20px 5px;
+  border: 1px solid #000;
+  border-radius: 48px;
+  background: url(images/aerial.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img-box1{
+  width: 130px;
+  height:130px;
+  margin:  20px 10px;
+  border: 1px solid #000;
+  border-radius: 9999px;
+  background: url(images/avatar1.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img-box1:nth-child(2){
+  background: url(images/avatar2.png);
+  background-size: cover;
+  background-position: center;
+}
+.img-box2{
+  width: 130px;
+  height:130px;
+  margin: 20px 10px;
+  border: 1px solid #000;
+  border-radius: 9999px;
+  background: url(images/avatar3.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.img-box2:nth-child(2){
+  background: url(images/avatar4.png);
+  background-size: cover;
+  background-position: center;
+}
+.img-box1>h3{
+  justify-items: center;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+.img-box2>h3{
+  justify-items: center;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+.img-box0:hover{
+  cursor: pointer;
+  background-color: #e1e1e1;
+}
+.img-box1:hover{
+  cursor: pointer;
+  background-color: #e1e1e1;
+}
+.img-box2:hover{
+  cursor: pointer;
+  background-color: #e1e1e1;
+}
+.img-box1:hover h3{
+
+  opacity: 100;
+  bottom: -25px;
+}
+.img-box2:hover h3{
+
+  opacity: 100;
+  bottom: -25px;
 }
 
