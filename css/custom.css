@@ -374,6 +374,7 @@ h0a {
   background-size: cover;
   background-position: center;
   position: relative;
+  transition: transform .2s;
 }
 .img-box1:nth-child(2){
   background: url(images/avatar2.png);
@@ -390,6 +391,7 @@ h0a {
   background-size: cover;
   background-position: center;
   position: relative;
+  transition: transform .2s;
 }
 
 .img-box2:nth-child(2){
@@ -426,19 +428,21 @@ h0a {
 .img-box1:hover{
   cursor: pointer;
   background-color: #e1e1e1;
+  transform: scale(1.2);
 }
 .img-box2:hover{
   cursor: pointer;
   background-color: #e1e1e1;
+  transform: scale(1.2);
 }
 .img-box1:hover h3{
 
   opacity: 100;
-  bottom: -25px;
+  bottom: -20px;
 }
 .img-box2:hover h3{
 
   opacity: 100;
-  bottom: -25px;
+  bottom: -20px;
 }
 
