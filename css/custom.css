@@ -21,7 +21,7 @@ h0a {
 
 .custom-image {
   border-radius: 48px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 100%;
   margin: 15px 0;
   -webkit-touch-callout: none;
@@ -31,6 +31,8 @@ h0a {
   -ms-user-select: none;
   user-select: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-image.center {
@@ -151,7 +153,7 @@ h0a {
   box-sizing: border-box;
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-
+  cursor: pointer;
   min-width: 100%;
 }
 
@@ -182,6 +184,7 @@ h0a {
   border-top: 0;
   border-right: 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .custom-dropdown2.large>div>a {
@@ -189,12 +192,14 @@ h0a {
   line-height: 25px;
   height: 35px;
   padding: 5px 10px;
-  border-radius: 18px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .custom-dropdown2>div>a:hover {
   background-color: #e1e1e1;
   color: black;
+  cursor: pointer;
 }
 
 .custom-dropdown2>div.force-hide {
@@ -307,6 +312,37 @@ h0a {
   padding: 0 30px;
 }
 
+.custom-button-flat2 {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  outline: none;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.1s, box-shadow 0.1s, border 0.1s;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #777777;
+  hover: 1px solid #777777;
+  background-color: #CCCCCC;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .footer-bar {
   background-color: transparent;
   display: flex;
@@ -333,7 +369,7 @@ h0a {
 }
 
 .container-team{
-  widht: 430px;
+  width: 430px;
   height: 100%;
   background: transparent;
   display: flex;
@@ -399,6 +435,68 @@ h0a {
   background-size: cover;
   background-position: center;
 }
+
+.img-box3{
+  width: 100px;
+  height:100px;
+  margin: 10px;
+
+
+  background: url(images/mitra1.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform .2s;
+}
+
+.img-box3:nth-child(2){
+  background: url(images/mitra2.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box3:nth-child(3){
+  background: url(images/mitra3.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box3:nth-child(4){
+  background: url(images/mitra4.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box3:nth-child(5){
+  background: url(images/mitra5.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box3:nth-child(6){
+  background: url(images/mitra6.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box3:nth-child(7){
+  background: url(images/mitra7.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.img-box4{
+  width: 350px;
+  height:350px;
+  margin: 20px 10px;
+
+
+  background: url(images/globe.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform .2s;
+}
+
+
+
+
 .img-box1>h3{
   justify-items: center;
   text-align: center;
@@ -411,6 +509,17 @@ h0a {
   transition: bottom 0.5s, opacity 0.5s;
 }
 .img-box2>h3{
+  justify-items: center;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0.5s;
+}
+.img-box3>h3{
   justify-items: center;
   text-align: center;
   font-size: small;
@@ -435,13 +544,31 @@ h0a {
   background-color: #e1e1e1;
   transform: scale(1.2);
 }
-.img-box1:hover h3{
+.img-box3:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transform: scale(1.5);
+}
+.img-box4:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transform: scale(1.2);
+}
 
+
+.img-box1:hover h3{
   opacity: 100;
   bottom: -20px;
 }
 .img-box2:hover h3{
-
+  opacity: 100;
+  bottom: -20px;
+}
+.img-box3:hover h3{
+  opacity: 100;
+  bottom: -20px;
+}
+.img-box4:hover h3{
   opacity: 100;
   bottom: -20px;
 }

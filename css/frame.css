@@ -499,6 +499,7 @@ hr {
   display: flex;
 }
 
+
 .image.center {
   align-self: center;
 }
@@ -533,6 +534,7 @@ hr {
 
 .max-width-400 {
   max-width: 400px;
+  border-radius: 24px;
 }
 
 .max-width-140 {
@@ -706,6 +708,14 @@ ol.nested>li:before {
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .iframe-container {
