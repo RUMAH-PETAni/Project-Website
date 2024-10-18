@@ -23,7 +23,7 @@
   <script src="js/animateIfInView.js"></script>
   <style>
     .menu-index {
-      color: rgb(142, 202, 230) !important;
+      color: rgb(255, 255, 255) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
     }
@@ -40,16 +40,13 @@
           </a>
         </div>
             <div class="custom-dropdown2 large">
-              <a  tabindex="0"><span>Menu</span></a>
+              <a  tabindex="0"><span>&nbsp Menu</span></a>
               <div>
                 <a href="#"></a>
-                <a href="index.html">Beranda</a>
-                <a href="#">Proyek</a>
-                <a href="#">Insight</a>
-                <a href="#">Galeri</a>
-              </div>
-              <div id="dialog-0" title="Oops.." data-role="none">
-                <p>Maaf, tetapi saat ini kami sedang dalam tahap pengembangan aplikasi</p>
+                <a class="highlight-text" href="index.html">Beranda</a>
+                <a href="Activity.html">Aktifitas</a>
+                <a href="empty.html">Data&Peta</a>
+                <a href="empty.html">Galeri</a>
               </div>
             </div>
         </div>
@@ -70,17 +67,17 @@
   </script>
 
     <!-------------------------------------------------------------------------------------------->
-  <div class="content-container">
+  <div class="content-container " style="padding-top: 50px">
     <!-------------------------------------------------------------------------------------------->
     <!--Start Header-->
-    <div class="content" style="margin-top: 50px;">
+    <div class="content"  >
       <div class="content-table flex-column">
         <div class="flex-row">
           <div class="flex-item flex-item-stretch">
-            <a class="image adaptive-image" style="background-image: url('assets/mapgif.gif'); min-height: 350px;"></a>  
+            <a class="image adaptive-image" style="background-image: url('assets/mapgif.gif'); min-height: 360px;"></a>  
             <div class="control-group">
-              <button class="custom-button-flat large stretch-on-mobile pulse-black">
-                <span><em>"Kami mendayagunakan teknologi digital melalui pemanfataan data dan informasi geospasial untuk pengelolaan potensi sumber daya alam yang lestari"</em></span></button>
+              <button class="custom-button-flat large stretch-on-mobile">
+                <span><em>"Melalui data dan informasi geospasial kami mendayagunakan teknologi digital untuk pengelolaan potensi sumber daya alam yang berkelanjutan"</em></span></button>
             </div>        
           </div>
         </div>
@@ -111,7 +108,8 @@
       <div class="content-table flex-column" >
         <div class="flex-row" >
           <div class="flex-item flex-item-stretch flex-column "> 
-            <h2 class="text text-center"> Tentang Kami</h2>
+            <hr>
+            <h2 class="text text-center">&middot Tentang Kami &middot</h2>
             <hr>
           </div>
         </div>
@@ -126,7 +124,7 @@
             <p class="text text-justify">
               <span class="highlight-text">RUMAH PETAni</span> merupakan sebuah gerakan komunitas dengan misi bersama 
               untuk mewujudkan hubungan yang seimbang antara manusia dengan alam. Atas dasar kepedulian 
-              terhadap isu lingkungan terkini, semangat kami untuk melakukan inovasi sebagai bentuk kontribusi kepada komunitas petani 
+              terhadap lingkungan, semangat kami untuk melakukan inovasi sebagai bentuk upaya kontribusi kepada komunitas petani 
               agar dapat mengelola dan memanfaatkan potensi sumber daya alam secara bertanggung jawab dan berkelanjutan.
             </p>
           </div>
@@ -134,10 +132,10 @@
         <div class="flex-row">
           <div class="flex-item flex-item-stretch flex-column">
             <p class="text text-justify">
-              <span class="highlight-text">Tim kami</span> didukung oleh orang-orang yang telah berpengalaman dibidangnya, 
+              <span class="highlight-text">Tim kami</span> didukung oleh orang-orang yang berkompeten dan telah berpengalaman, 
               mulai dari GIS spesialis, para peneliti, penggiat sosial kemasyarakatan hingga praktisi agroforestri. 
-              Ide dasar kami yaitu bagaimana untuk dapat mengintegrasikan teknologi digital terutama dalam pemanfaatan 
-              data dan informasi geosapasial yang tepat guna agar dapat memberikan manfaat dan dampak yang positif dalam 
+              Gagasan dasar kami yaitu bagaimana untuk dapat mengintegrasikan teknologi digital terutama dalam pemanfaatan 
+              data dan informasi geosapasial yang tepat guna untuk dapat memberikan manfaat dan dampak yang positif dalam 
               praktik pengelolaan potensi sumberdaya alam yang ada.
             </p>    
           </div>
@@ -155,24 +153,28 @@
               </div>
             </div>
           </div>
-        </div>    
+        </div>
       </div>
     </div>
     <div class="content">
       <div class="content-table flex-column">
         <div class="flex-row" >
           <div class="flex-item flex-item-stretch flex-column "> 
-            <h2 class="text text-center"> Fokus Kami</h2>
+            <hr>
+            <h2 class="text text-center">&middot Fokus Kami &middot</h2>
             <hr>
           </div>
         </div>
         <div class="flex-row">
-          <!-- <a class="image adaptive-image" style="background-image: url('assets/mapgif.gif'); min-height: 350px;"></a>           -->
-          <div class="flex-row">
-            <div class="flex-item flex-item-stretch flex-column">
-              <img class="custom-image center" src="assets/planting_small.png">
-            </div>
+          <!-- <a class="image adaptive-image" style="background-image: url('assets/planting.jpg'); min-height: 350px;"></a>           -->
+           <!-- <div class="flex-row"> -->
+            <div class="flex-item flex-item-stretch">
+              <a class="custom-image adaptive-image" style="background-image: url('assets/planting.jpg'); min-height: 350px;"></a> 
+              <!-- <a class="custom-image adaptive-image" style="background-image: url('assets/planting_small.jpg'); min-height: 350px;"></a>
+            </div> -->
           </div>
+        </div>
+        <div class="flex-row">
           <div class="flex-item flex-item-stretch flex-column"> 
             <p class="text text-justify">
               <span class="highlight-text">Masyarakat sekitar hutan</span> memegang peranan yang sangat penting dalam menjaga kelestarian dan keberadaan Hutan. 
@@ -189,6 +191,7 @@
                 <a class="custom-tab-menu-item" data-content="image2">2</a>
                 <a class="custom-tab-menu-item" data-content="image3">3</a>
                 <a class="custom-tab-menu-item" data-content="image4">4</a>
+                <a class="custom-tab-menu-item" data-content="image5">5</a>
               </div>
               <div class="custom-tab-content" data-content="image1">
                 <p class="text text-center graph-title">
@@ -215,23 +218,10 @@
                   Paradigma teknologi baru memungkinkan pengelolaan lahan secara regeneratif sebagai salah satu upaya untuk menghadapi 
                   dampak dari perubahan iklim yang sangat berpengaruh terhadap hasil produksi pertanian saat ini. 
                   Kami mencoba menggabungkan pengetahuan petani lokal dengan kemajuan teknologi dari sektor pertanian dan kehutanan menjadi solusi khusus untuk agroforestri. 
-                  Dengan menggunakan pendekatan dan metode pertanian presisi berbasis area dan aset pohon digital ke dalam sistem monitoring dan produksi agroforestri.
+                  Dengan menggunakan pendekatan dan metode pertanian presisi berbasis area dan aset pohon digital ke dalam sistem monitoring dan praktik agroforestri.
                 </p>
               </div>
               <div class="custom-tab-content" data-content="image3">
-                <p class="text text-center graph-title">
-                  Monitoring Deforestasi
-                </p>
-                <a class="image adaptive-image" style="background-image: url('assets/drone.jpg'); min-height: 400px;"></a>
-                <!-- <img class="image no-top-margin max-width-400 center add-top-margin-small" src="assets/planting.jpg"> -->
-                <p class="text text-small text-justify">
-                  Deforestasi telah menjadi ancaman yang cukup serius terhadap keberadaan hutan dan keanekaragaman hayati, 
-                  diperlukan keterlibatan dari semua pihak untuk menghadapi masalah tersebut. 
-                  Untuk itu kami memanfaatkan peran teknologi digital melalui sistem pemantauan berbasis data spasial dan aplikasi mobile (peringatan deforestasi terpadu) 
-                  dalam skema kegiatan kolaborasi bersama dengan instansi yang berwenang, NGO dan masyarakat sekitar hutan dalam kegiatan pengawasan, perlindungan dan pengamanan hutan.
-                </p>
-              </div>
-              <div class="custom-tab-content" data-content="image4">
                 <p class="text text-center graph-title">
                   Keanekaragaman Hayati
                 </p>
@@ -245,12 +235,79 @@
                   dan penerapan metode penelusuran cepat keanekaragaman hayati berbasis komunitas.
                 </p>
               </div>
+              <div class="custom-tab-content" data-content="image4">
+                <p class="text text-center graph-title">
+                  Monitoring Deforestasi
+                </p>
+                <a class="image adaptive-image" style="background-image: url('assets/drone.jpg'); min-height: 400px;"></a>
+                <!-- <img class="image no-top-margin max-width-400 center add-top-margin-small" src="assets/planting.jpg"> -->
+                <p class="text text-small text-justify">
+                  Deforestasi telah menjadi ancaman yang cukup serius terhadap keberadaan hutan dan keanekaragaman hayati, 
+                  diperlukan keterlibatan dari semua pihak untuk menghadapi masalah tersebut. 
+                  Untuk itu kami memanfaatkan peran teknologi digital melalui sistem pemantauan berbasis data spasial dan aplikasi mobile (peringatan deforestasi terpadu) 
+                  dalam skema kegiatan kolaborasi bersama dengan instansi yang berwenang, NGO dan masyarakat sekitar hutan dalam kegiatan pengawasan, perlindungan dan pengamanan hutan.
+                </p>
+              </div>
+              <div class="custom-tab-content" data-content="image5">
+                <p class="text text-center graph-title">
+                  Jejak Karbon
+                </p>
+                <a class="image adaptive-image" style="background-image: url('assets/karbon.png'); min-height: 400px;"></a>
+                   <!-- <img class="image no-top-margin max-width-400 center add-top-margin-small" src="assets/planting.jpg"> -->
+                <p class="text text-small text-justify">
+                  Jejak karbon merupakan emisi gas rumah kaca yang dihasilkan dari berbagai aktivitas manusia, terutama sektor kehutanan yang merupakan salah satu sektor penting yang mempengaruhi gas rumah kaca. 
+                  Melalui analisis dan perhitungan data geospasial kami mencoba untuk memberikan insight kepada para pihak terkait emisi karbon yang dihasilkan dari aktifitas pengelolaan hutan.
+                  Sehingga diharapkan dapat meningkatkan pengetahuan dan kesadaran bersama untuk lebih peduli terhadap isu perubahan iklim yang sedang terjadi saat ini.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+    <div class="content">
+      <div class="content-table flex-column">
+        <div class="flex-row" >
+          <div class="flex-item flex-item-stretch flex-column "> 
+            <hr>
+            <h2 class="text text-center">&middot Mitra Kolaborasi &middot</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-item flex-column"> 
+            <p class="text text-justify">
+              Untuk saat ini kami telah berkolaborasi bersama dengan para pihak terkait, yaitu mulai dari komunitas petani lokal <em>(Kelompok Tani Hutan)</em>, 
+              organisasi penggiat lingkungan, organisiasi nirlaba, perguruan tinggi dan juga instansi pemerintahan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" style="margin-top: -50px;">
+      <div class="content-table flex-column">
+        <div class="flex-row" >
+          <div class="flex-item flex-item-stretch flex-column">
+            <div class="gallery-team">
+              <div class="img-box3"><h3></h3>
+              </div>
+              <div class="img-box3"><h3></h3>
+              </div>
+              <div class="img-box3"><h3></h3>
+              </div>
+              <div class="img-box3"><h3></h3>
+              </div>
+              <div class="img-box3"><h3></h3>
+              </div>
+              <div class="img-box3"><h3></h3>
+              </div>
+              <div class="img-box3"><h3></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <div id="parallax-world-of-ugg">   
       <section>
         <div class="parallax-two">
@@ -282,7 +339,7 @@
             <div class="flex-item flex-column">
               <h3>Hubungi kami</h3>
               <p class="text add-bottom-margin-large text-justify">
-                Jika anda memiliki pertanyaan mengenai komunitas dan kegiatan kami, ataupun ingin berbagi ide dan gagasan anda kepada kami,     
+                Jika anda memiliki pertanyaan mengenai komunitas dan kegiatan kami, ataupun ingin berbagi ide, gagasan dan pemikiran anda kepada kami,     
                 jangan ragu untuk menghubungi kami melalui rincian yang disediakan di bawah ini untuk mendapatkan informasi lebih lanjut. 
                 </br>&nbsp
                 </br>Email: rmh.petani@gmail.com
