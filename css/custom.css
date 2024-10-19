@@ -485,8 +485,6 @@ h0a {
   width: 300px;
   height:300px;
   margin: 0px;
-
-
   background: url(images/globe.gif);
   background-size: cover;
   background-position: center;
@@ -494,6 +492,16 @@ h0a {
   transition: transform .2s;
 }
 
+.img-box5{
+  width: 300px;
+  height:300px;
+  margin: 0px;
+  background: url(images/maps.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform .2s;
+}
 
 
 
@@ -555,6 +563,12 @@ h0a {
   transform: scale(1.2);
 }
 
+.img-box5:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
 
 .img-box1:hover h3{
   opacity: 100;
@@ -572,4 +586,7 @@ h0a {
   opacity: 100;
   bottom: -20px;
 }
-
+.img-box5:hover h3{
+  opacity: 100;
+  bottom: -20px;
+}
