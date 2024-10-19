@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>RUMAH PETAni - Aktifitas</title>
+  <title>RUMAH PETAni - Site Area</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" />
@@ -21,11 +21,51 @@
   <script src="js/util.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/animateIfInView.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+	<link rel="stylesheet" href="css//leaflet-sidepanel.css">
   <style>
     .menu-index {
       color: rgb(142, 202, 230) !important;
       opacity: 1 !important;
       font-weight: 700 !important;
+    }
+  </style>
+  <style>
+    #map {
+        display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+      
+        width: auto;
+        height: 400px;
+        border: 1px solid #1f1412;
+        border-radius: 12px;
+        z-index: 1;    
+    }
+    @media screen and (min-width: 1024px) {
+        #map {
+            height: 400px;
+            width: 840px;
+        }
+    }
+    .sidepanel-content {
+        font-size: 1rem;
+    }
+    .sidepanel-content h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .sidepanel-content a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #199900;
+        transition: color 0.3s ease-in;
+    }
+    .sidepanel-content a:hover {
+        color: #116600;
+        text-decoration: underline;
     }
   </style>
 </head>
@@ -46,7 +86,7 @@
                 <a href="index.html">Beranda</a>
                 <a class="highlight-text" href="activity.html">Aktifitas</a>
                 <a href="empty.html">Galeri</a>
-                <a href="map.html">Peta</a>
+                <a  href="map.html">Peta</a>
                 
               </div>
             </div>
@@ -75,124 +115,107 @@
       <div class="content-table flex-column">
         <div class="flex-row">
           <div class="flex-item flex-column full-width">
-            <h2 id="images-and-image-button">Aktifitas Terkini</h2>
+            <h2 id="images-and-image-button">Site Area</h2>
             <hr>
           </div>
-        </div>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch">
-            <a class="custom-image adaptive-image" style="background-image: url('assets/swapeta.jpg'); min-height: 350px;"></a> 
-            <p class="image-caption">swaPETA | Survei Potensi & Pemetaan Lahan Partisipatif</p>        
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content" style="margin-top: -50px;">
-      <div class="content-table flex-column">
-        <div class="flex-row" style="padding: 25px 0px;">
-          <div class="flex-item flex-item-stretch">
-            <div class="control-group">
-              <button class="custom-button-flat2 large stretch-on-mobile">
-                <span class="text-small text-justify">Dalam skema perhutanan sosial salah satu tahapan penting pasca pemberian persetujuan perhutanan sosial kepada masyarakat 
-                  <em>(perorangan, kelompok tani hutan/gabungan kelompok tani hutan, koperasi)</em> adalah penerima izin harus melakukan penataan areal
-                  sebagai upaya untuk mewujudkan kepastian hukum terhadap areal persetujuan perhutanan sosial. Penataan areal dan pembuatan andil garapan 
-                  memerlukan kerjasama yang baik antara para pihak, hal ini dapat dipahami karena dalam pelaksanaan penataan areal, 
-                  pembuatan ruang kelola dan pembuatan andil garapan adalah hal yang sulit apabila diserahkan kepada pemegang persetujuan 
-                  tanpa adanya bantuan dan bimbingan teknis dari pihak terkait.
-                </span>
-              </button>
-            </div> 
-          </div>  
-        </div>       
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <p class="text text-justify">
-             
-              <span class="highlight-text">swaPETA</span> merupakan model kegiatan partisipatif yang sedang kami upayakan dalam kolaborasi bersama 
-              dengan para pihak terkait yaitu; <em>pemangku wilayah dan Kebijakan, pihak penerima manfaat izin kelola maupun mitra potensial yang memiliki kepentingan serupa,</em>
-              yang bertujuan untuk mempercepat proses pengolahan, sinkronisasi (verifikasi dan validasi) serta publikasi data dan informasi terkait dengan subjek dan objek 
-              area kelola komunitas petani yang telah memiliki akses legal dalam skema perhutanan sosial.
-              <br>&nbsp<br>
-              
-              
-            </p>
-            
-          </div>
-          <div class="flex-item flex-item-stretch flex-column">
-            <div class="gallery-team">
-              <div class="img-box4"><h3></h3>
-              </div>
-            </div>
-            
-          </div>
-        </div>     
-      </div> 
-    </div>     
-    <div class="content" style="margin-top: -50px;">
-      <div class="content-table flex-column">
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column" style="padding: 5px;" >
-            <a class="custom-button-flat stretch-on-mobile" href="site.html"><img src="img/map.png"><span>Site Area</span></a>
-          </div>
-          <div class="flex-item  flex-item-stretch flex-column" style="padding: 5px;">
-            <a class="custom-button-flat stretch-on-mobile" href="workflow.html"><img src="img/workflow.png"><span>Workflow</span></a>
-          </div>
-          <div class="flex-item flex-item-stretch flex-column" style="padding: 5px;">
-            <a class="custom-button-flat stretch-on-mobile" href="output.html"><img src="img/data.png"><span>Output Data</span></a>
-          </div>
-        </div>
-      </div>
-    </div> 
-    <div class="content" style="margin-top: -50px;">
-      <div class="content-table flex-column"> 
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <p class="text text-justify">
-              <em>"Kolaborasi yang baik di antara para pihak akan mampu menciptakan data dan informasi dengan proses inklusif yang efektif serta dengan sumber daya yang lebih efisien.
-                Sehingga mampu menjadi media perencanaan pembangunan dan pemanfaatan sumber daya alam yang berkelanjutan."</em>
-            </p>
-          </div>     
         </div> 
-      </div>   
-    </div>
-    <div class="content">
-      <div class="content-table flex-column"> 
         <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <h2 id="images-and-image-button">Aktifitas Yang Lalu</h2>
-            <hr>
-            <p class="text">
-            </p>
+          <div class="flex-item flex-item-stretch">
+    <!-------------------------------------------------------------------------------------------->
+    <!--Start Map-->
+            <div id="map">	</div>
+            <!-- Scripts -->
+            <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+              crossorigin=""></script>
+            <script src="js/leaflet-sidepanel.min.js"></script>
+              <script src="data/map_resort.js"></script>
+              <script src="data/FungsiKawasan_1.js"></script>
+            <script>
+              const map = L.map('map', {
+                zoomControl: false
+              }).setView([-5.35483, 104.479398], 10);
+              L.control.scale({
+                position: 'bottomleft',
+                      imperial: false
+              }).addTo(map);
+              L.control.zoom({
+                position: 'topleft'
+              }).addTo(map);
+              L.tileLayer('https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}@2x.png', {
+                attribution: ""
+              }).addTo(map);
+          
+                  function style_FungsiKawasan_1_0(feature) {
+                      switch(String(feature.properties['Kode'])) {
+                          case 'HL':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(2,173,0,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                          case 'HP':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(255,255,0,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                          case 'HPT':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(138,242,0,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                          case 'KPA':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(173,63,255,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                      }
+                  }
+                  L.geoJSON(json_FungsiKawasan,{style:style_FungsiKawasan_1_0}).addTo(map);
+                  L.geoJSON(resortjson,{onEachFeature: function(feature,layer)
+                      {layer.bindPopup(feature.properties['Resort'])},
+                      style: {fillColor:"#fff",
+                              color:"#444444",
+                            weight:'2',
+                              fillOpacity:0
+                      }
+                  }).addTo(map);
+              </script> 
           </div>
-        </div>
-        <div class="flex-row-space-between"> 
+    <!-------------------------------------------------------------------------------------------->
+    <!--End Map-->
+          <p class="image-caption" style="margin-top: 10px;">Kawasan Hutan Lindung KPH Kota Agung Utara, Kabupaten Tanggamus, Provinsi Lampung</p>  
+          </div> 
+      
           <div class="flex-item flex-column">
-            <a href="empty.html" class="image max-width-400">
-              <img src="assets/Pantau.webp" style="border-radius: 48px;">
-            </a>
-            <p class="image-caption">Pantau Hutan | Monitoring Kawasan Hutan Partisipatif</p>
-          </div>
-          <div class="flex-item flex-column">
-            <a href="empty.html" class="image max-width-400">
-              <img src="assets/RBA.webp" style="border-radius: 48px;">
-            </a>
-            <p class="image-caption">Participatory Rapid Biodiversity Assessment</p>
-          </div>
-          <div class="flex-item flex-column">
-            <a href="empty.html" class="image max-width-400">
-              <img src="assets/presentasi.webp" style="border-radius: 48px;">
-            </a>
-            <p class="image-caption">Monitoring Karbon Berbasis Data Spasial</p>
-          </div>
-          <div class="flex-item flex-column">
-            <a href="empty.html" class="image max-width-400">
-              <img src="assets/diagram.webp" style="border-radius: 48px;">
-            </a>
-            <p class="image-caption">DIAGRAM | Digital Agroforestry Program</p>
+            <div class="control-group">
+              <a class="custom-button-flat pulse-black" href="activity.html" target="_blank">
+                <img src="img/back.png"><span>Kembali</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>    
+    </div>
+ 
     <!-------------------------------------------------------------------------------------------->
     <div class="custom-banner">
       <div class="banner-table flex-column">
