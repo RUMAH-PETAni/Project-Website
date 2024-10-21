@@ -108,10 +108,14 @@
             <script src="js/leaflet-sidepanel.min.js"></script>
               <script src="data/map_resort.js"></script>
               <script src="data/FungsiKawasan_1.js"></script>
+              <script src="data/ArealKelolaHKmTR1.js"></script>
+              <script src="data/ArealKelolaHKmTR2.js"></script>
+              <script src="data/ArealKelolaHKmTR3.js"></script>
+              <script src="data/ArealKelolaHKmLS.js"></script>
             <script>
               const map = L.map('map', {
                 zoomControl: false
-              }).setView([-5.35483, 104.479398], 10);
+              }).setView([-5.476617, 104.43145], 15);
               L.control.scale({
                 position: 'bottomleft',
                       imperial: false
@@ -168,23 +172,52 @@
                       }
                   }
                   L.geoJSON(json_FungsiKawasan,{style:style_FungsiKawasan_1_0}).addTo(map);
-                  L.geoJSON(resortjson,{onEachFeature: function(feature,layer)
-                      {layer.bindPopup(feature.properties['Resort'])},
+                  L.geoJSON(resortjson,{
                       style: {fillColor:"#fff",
                               color:"#444444",
                             weight:'2',
                               fillOpacity:0
                       }
                   }).addTo(map);
+                  L.geoJSON(json_ArealKelolaHKmTR1,{style: {
+                    fillColor:"#444444",
+                    color:"#444444",
+                    weight:'1',
+                    fillOpacity:0}
+                  }).addTo(map);
+                  L.geoJSON(json_ArealKelolaHKmTR3,{style: {
+                    fillColor:"#444444",
+                    color:"#444444",
+                    weight:'1',
+                    fillOpacity:0}
+                  }).addTo(map); 
+                  L.geoJSON(json_ArealKelolaHKmLS,{style: {
+                    fillColor:"#444444",
+                    color:"#444444",
+                    weight:'1',
+                    fillOpacity:0}
+                  }).addTo(map);
+
+                  L.geoJSON(json_ArealKelolaHKmTR2,{style: {
+                    fillColor:"#444444",
+                    color:"blue",
+                    weight:'2',
+                    fillOpacity:0.5}
+                  }).addTo(map);
+
                   var swapetaIcon = L.icon({
                   iconUrl: "data/swapetaicon.svg",
-                
-              
                   iconSize:     [30, 30], // size of the icon
                   popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
                   });
+                  L.marker([-5.499801, 104.440814], {icon: swapetaIcon}).addTo(map)
+                  .bindTooltip('GAPOKTANHUT LESTARI SEJAHTERA');
+                  L.marker([-5.479615, 104.436567], {icon: swapetaIcon}).addTo(map)
+                  .bindTooltip('KTH TUMPAK REJO 1');
                   L.marker([-5.476617, 104.43145], {icon: swapetaIcon}).addTo(map)
-                  .bindTooltip('KTH TUMPAK REJO 2<br>SK.10541/MENLHK-PSKL/PKPS/PSL.0/9/2023');
+                  .bindTooltip('KTH TUMPAK REJO 2');
+                  L.marker([-5.477983, 104.440795], {icon: swapetaIcon}).addTo(map)
+                  .bindTooltip('KTH TUMPAK REJO 3');
 
                   
                   L.Control.Watermark=L.Control.extend({
@@ -229,10 +262,10 @@
               </table> 
             </p>
             
-            <a class="custom-button-flat stretch-on-mobile" href="empty.html">
+            <a class="custom-button-flat stretch-on-mobile" href="empty3.html">
               <img src="img/map.png"><span> Peta Lahan Andil Garapan</span>
             </a>
-            <a class="custom-button-flat stretch-on-mobile" href="empty.html">
+            <a class="custom-button-flat stretch-on-mobile" href="empty3.html">
               <img src="img/data.png"><span> Database Anggota Kelompok</span>
             </a>
            
@@ -339,7 +372,7 @@
                 </div>
                 <div class="group">
                   <div class="footer-item2">
-                    <a id="dialog-btn-1" title="Oops.." class="custom-image-button">
+                    <a class="custom-image-button" href="empty2.html">
                     <img src="img/google-play-badge.png" width="150">
                     </a>
                   </div>
@@ -348,9 +381,6 @@
                   <p>Salin tautan berikut untuk membagikan ke yang lainnya</p>
                   <input id="share-url" class="custom-textbox" type="text" autofocus="autofocus" value="https://rumah-petani.github.io/Project-Website/" readonly>
                   <p id="share-url-copy-prompt">Tautan telah disalin</p>
-                </div>
-                <div id="dialog-1" title="Oops.." data-role="none">
-                  <p>Maaf, tetapi saat ini kami sedang dalam tahap pengembangan aplikasi</p>
                 </div>
               </div>
               <hr>
