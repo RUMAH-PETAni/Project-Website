@@ -758,7 +758,7 @@ h0a {
   font-weight: bold;
   position: absolute;
   margin-bottom: 2px;
-  left: 15px;
+  left: 35px;
   opacity: 0;
   transition: bottom 0.5s, opacity 0s;
 }
