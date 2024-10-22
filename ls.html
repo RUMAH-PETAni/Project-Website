@@ -28,9 +28,9 @@
     function drawChart() {
       var data1 = google.visualization.arrayToDataTable([
         ['Indikatif Tuplah', '% Area'],
-        ['Hutan Kerapatan Rendah',  2.7],
-        ['Hutan Regenerasi Muda',  60.7],
-        ['Kebun & Lahan Terbuka', 36.6],
+        ['Hutan Kerapatan Rendah',  1],
+        ['Hutan Regenerasi Muda',  31],
+        ['Kebun & Lahan Terbuka', 68],
       
       ]);
 
@@ -38,7 +38,7 @@
       legend: 'none',
       pieSliceText: 'label',
       title: 'Indikatif Tutupan Lahan',
-      pieStartAngle: 80,
+      pieStartAngle: 0,
       pieSliceText:'percentage',
       tooltip:{text: 'percentage'},
       legend: {position: 'top', textStyle: {color: 'blue', fontSize: 10}},
@@ -48,10 +48,10 @@
 
     var data2 = google.visualization.arrayToDataTable([
         ['Jenis Tegakan', '% Area'],
-        ['Kopi',  67.4],
-        ['Durian',  13.4],
-        ['Pala', 9.6],
-        ['Jengkol', 9.6]
+        ['Kopi',  91],
+        ['Pala', 4],
+        ['Durian',  3.5],
+        ['Kakao', 1.5],
       ]);
 
     var options2 = {
@@ -67,7 +67,11 @@
 
     var data3 = google.visualization.arrayToDataTable([
         ['Elevasi', '% Area'],
-        ['600 - 700 mdpl', 100],
+        ['< 500 mdpl', 14],
+        ['500 - 600 mdpl', 56],
+        ['600 - 700 mdpl', 28],
+        ['> 700 mdpl', 2],
+  
       
       ]);
 
@@ -79,15 +83,16 @@
       pieSliceText:'percentage',
       tooltip:{text: 'percentage'},
       legend: {position: 'top', textStyle: {color: 'blue', fontSize: 10}},
+      slices: {0: {color: 'grey'}, 1: {color: '#3366cc'}, 2: {color: 'orange'}, 3: {color: 'green'}},
     };
 
     var data4 = google.visualization.arrayToDataTable([
         ['Kelerengan', '% Area'],
-        ['Datar',  4],
-        ['Landai',  11],
-        ['Agak Curam', 30],
-        ['Curam', 54],
-        ['Sangat Curam', 1],
+        ['Datar',  9],
+        ['Landai',  23],
+        ['Agak Curam', 39],
+        ['Curam', 24],
+        ['Sangat Curam', 4],
       ]);
 
     var options4 = {
