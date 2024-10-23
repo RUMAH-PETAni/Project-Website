@@ -551,14 +551,14 @@ h0a {
   margin:  20px 10px;
   border: 1px solid #000;
   border-radius: 9999px;
-  background: url(images/fajar.png);
+  background: url(images/avatar1.png);
   background-size: cover;
   background-position: center;
   position: relative;
   transition: transform .2s;
 }
 .img-box1:nth-child(2){
-  background: url(images/duryat.png);
+  background: url(images/avatar2.png);
   background-size: cover;
   background-position: center;
 }
@@ -568,7 +568,7 @@ h0a {
   margin: 20px 10px;
   border: 1px solid #000;
   border-radius: 9999px;
-  background: url(images/bondan.png);
+  background: url(images/avatar3.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -576,7 +576,7 @@ h0a {
 }
 
 .img-box2:nth-child(2){
-  background: url(images/sugriwo.png);
+  background: url(images/avatar4.png);
   background-size: cover;
   background-position: center;
 }
