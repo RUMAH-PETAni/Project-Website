@@ -697,6 +697,13 @@ ol.nested>li:before {
 .text-small {
   font-size: 12px;
 }
+.text-ssmall {
+  font-size: 10px;
+}
+.text-medium {
+  font-size: 14px;
+}
+
 
 .text-italic {
   font-style: italic;
