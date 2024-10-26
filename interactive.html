@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+	<link rel="stylesheet" href="css/leaflet-sidepanel.css">
+	<link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/x-icon" href="assets/icon.png">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="css/L.switchBasemap.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+	
+	<title>Leaflet - Side Panel plugin</title>
+	<style>
+		html,
+		body {
+			margin: 0;
+			font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+			height: 100%;
+			color: #1f1412;
+			/* background-color: #FFB703; */
+		}
+
+		body {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.header h1 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.header a {
+			font-size: 16px;
+			color: #199900;
+			text-decoration: none;
+			margin-left: 24px;
+		}
+
+		.header a:hover {
+			color: #116600;
+			text-decoration: underline;
+		}
+		
+		.header a span {
+			margin-left: 4px;
+		}
+
+		.header a svg {
+			vertical-align: middle;
+		}
+
+		#map {
+			width: 100%;
+			height: 100vh;
+			/* border: 1px solid #1f1412; */
+		}
+
+		@media all and (min-width: 1024px) {
+			#map {
+				height: 768px;
+				width: 1366px;
+			}
+		}
+
+		.sidepanel-content {
+			font-size: 1rem;
+		}
+
+		.sidepanel-content h4 {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		.sidepanel-content a {
+			text-decoration: none;
+			font-size: 1rem;
+			color: #199900;
+			transition: color 0.3s ease-in;
+		}
+
+		.sidepanel-content a:hover {
+			color: #116600;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="custom-menu-container2" style="z-index: 9999;">
+		<div class="menu">
+		  <div class="menu-table flex-row-space-between">
+			<div class="logo flex-row-center">
+			  <a href="index.html">
+				<img src="assets/images/logo.svg">
+			  </a>
+			</div>
+				<div class="custom-dropdown2 large">
+				  <a  tabindex="0"><span>Menu</span></a>
+				  <div>
+					<a href="#"></a>
+					<a href="index.html">Beranda</a>
+					<a href="activity.html">Aktifitas</a>
+					<a class="highlight-text" href="gallery.html">Galeri</a>
+				
+				</div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<!-- <header class="header">
+		<h1>Leaflet Sidepanel <a href="https://github.com/maxwell-ilai/Leaflet.SidePanel">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+					<path
+						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+				</svg><span>Github</span>
+			</a>
+		</h1>
+	</header> -->
+	<!-- Map ID -->
+	<div id="map">
+		<!-- Side Panel left -->
+		<div id="mySidepanelLeft" class="sidepanel" aria-label="side panel" aria-hidden="false">
+			<div class="sidepanel-inner-wrapper">
+				<nav class="sidepanel-tabs-wrapper" aria-label="sidepanel tab navigation">
+					<ul class="sidepanel-tabs">
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-5">
+								<img src="assets/images/layers.png" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">	
+							</img>
+							</a>
+						</li>
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-2">
+								<img src="assets/images/edit.png" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">	
+								</img>
+								</a>
+						</li>
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-3">
+								<img src="assets/images/chart.png" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">	
+							</img>
+							</a>
+						</li>
+						
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-1">
+								<img src="assets/images/info.png" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">	
+							</img>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="sidepanel-content-wrapper">
+					<div class="sidepanel-content">
+						<div class="sidepanel-tab-content" data-tab-content="tab-5">
+						
+							<h3>Lapisan-Lapisan</h3>
+							<hr>
+							<br>
+							<div class="flex text-medium">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Batas Adm Kab/Kota</span>
+							</div>
+							<div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								</label>
+								<span>Fungsi Kawasan Hutan</span>
+							  </div>
+							<div class="flex text-medium">
+							  <label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Kesatuan Pengelola Hutan</span>
+							</div>
+						
+							<br>
+		
+						
+							<p class="text-medium highlight-text">Areal Izin Perhutanan Sosial</p>
+							<div class="flex text-medium">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Hutan Desa</span>
+							</div>
+							<div class="flex text-medium">
+								<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+								</label>
+								<span>Hutan Kemasyarakatan</span>
+							</div>
+							<div class="flex text-medium">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Hutan Tanaman Rakyat</span>
+							</div>
+							<div class="flex text-medium">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Hutan Adat</span>
+							</div>
+							<div class="flex text-medium">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Kemitraan Kehutanan</span>
+							  <p class="text-ssmall">[Sumber data : webgis KLHK]</em></p>
+							<hr>
+							</div>
+							
+
+							<div class="flex text-medium">
+							  <label class="switch">
+								<input type="checkbox">
+								<span class="slider2 round"></span>
+							  </label>
+							  <span>*Lahan Andil Garapan</span>
+							</div>
+
+							<div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox">
+								  <span class="slider2 round"></span>
+								</label>
+								<span>*Foto Udara </span>
+								<p class="text-ssmall"><em>*Lapisan tidak tersedia untuk umum</em></p>
+							  </div>
+							  <hr>
+							  <br>
+
+							  <p class="text-medium highlight-text">Indikatif Kelas Tutupan Hutan</p>
+							  <div class="flex text-medium">
+							  <label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								</label>
+								<span>Hutan Kerapatan Tinggi</span>
+							  </div>
+							  <div class="flex text-medium">
+								  <label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								  </label>
+								  <span>Hutan Kerapatan Sedang</span>
+							  </div>
+							  <div class="flex text-medium">
+							  <label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								</label>
+								<span>Hutan Kerapatan Rendah</span>
+							  </div>
+							  <div class="flex text-medium">
+							  <label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								</label>
+								<span>Hutan Regenerasi Muda</span>
+							  </div>
+							 
+								  <p class="text-ssmall">[Sumber data : Indicative High Carbon Stock Maps 2020]</p>
+								  <hr>
+								  <br>
+							
+							  <p class="text-medium highlight-text">Monitoring Deforestasi</p>
+							  
+							  <div class="flex text-medium">
+							  <label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								</label>
+								<span>Deforestasi 2021 s.d 2023</span>
+							  </div>
+							  <p class="text-medium">*Peringatan Terpadu 2024 :</p>
+							
+							
+								<div class="flex-row" style="margin-left: -20px;">
+									<div class="flex-item flex-item-stretch flex-column">
+							  <div class="flex text-medium">
+							  <label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Januari</span>
+							</div>
+							  <div class="flex text-medium">
+								  <label class="switch">
+								  <input type="checkbox">
+								  <span class="slider round"></span>
+								  </label>
+								  <span>Februari</span>
+							  </div>
+							  <div class="flex text-medium">
+								<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+								</label>
+								<span>Maret</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									</label>
+									<span>April</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									</label>
+									<span>Mei</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									</label>
+									<span>Juni</span>
+								</div>
+								</div>
+								
+							
+								
+								<div class="flex-item flex-item-stretch flex-column"  style="margin-left: -20px;"> 
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									</label>
+									<span>Juli</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									</label>
+									<span>Agustus</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									</label>
+									<span>September</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider round"></span>
+									</label>
+									<span>Oktober</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider2 round"></span>
+									</label>
+									<span>November</span>
+								</div>
+								<div class="flex text-medium">
+									<label class="switch">
+									<input type="checkbox">
+									<span class="slider2 round"></span>
+									</label>
+									<span>Desember</span>
+								</div>
+								</div>
+								</div>
+							
+								
+						
+								<p class="text-ssmall "><em>*Peringatan terpadu adalah peringatan yang menunjukkan titik lokasi dimana terindikasi 
+									telah terjadi perubahan tutupan yang terekam melalui tangkapan citra satelit. 
+								</em></p>
+								  <p class="text-ssmall ">[Sumber data : Global Forest Watch | Data deforestasi dan peringatan terpadu yang ditampilkan pada peta interaktif
+									telah disesuaikan, dengan hanya menampilkan data geolokasi pada kelas indikatif tutupan hutan yang berada dalam status fungsi kawasan hutan]</p>
+								
+						</div>
+						<div class="sidepanel-tab-content" data-tab-content="tab-2">
+							<h3>Edit On Screen</h3>
+							<hr>
+							<p class="text-medium">Fitur ini belum tersedia, saat ini kami sedang dalam tahap pengembangan aplikasi.</p>
+						</div>
+						<div class="sidepanel-tab-content" data-tab-content="tab-3">
+							<h3>Analisis Data</h3>
+							<hr>
+							<p class="text-medium">
+							Fitur ini belum tersedia, saat ini kami sedang dalam tahap pengembangan aplikasi.</p>
+						</div>
+					
+						<div class="sidepanel-tab-content" data-tab-content="tab-1">
+							<h3>Disclaimer</h3>
+							<hr>
+							<p class="text-medium highlight-text">Peta Interaktif (versi beta)</p>
+							<p class="text-medium">
+							Data dan informasi yang disajikan pada peta interaktif ini tidak mengikat secara hukum sehingga tidak bisa dijadikan sebagai alat bukti yang sah
+								untuk tujuan yang dimaksud harus menggunakan Informasi Geospasial Tematik (Peta) yang telah disahkan oleh pejabat yang berwenang 
+								sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.</p>
+							
+							<p class="text-medium">Peta Interaktif ini hanya menyajikan data dan informasi berdasarkan lokus aktitifitas di wilayah Provinsi Lampung.</p>
+
+							<p class="text-medium">Visualisasi data dan informasi geospasial pada peta interaktif dibuat berdasarkan hasil pengumpulan, pengolahan dan analisis dari berbagai sumber dan referensi.
+							Untuk informasi lebih lanjut anda dapat <a href="mailto:rmh.petani@gmail.com">menghubungi kami.</a></p>
+							<p>&middot RUMAH PETAni &middot</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidepanel-toggle-container">
+				<button class="sidepanel-toggle-button" type="button" aria-label="toggle side panel"></button>
+			</div>
+		</div>
+
+		<!-- Side Panel right -->
+		<!-- <div id="mySidepanelRight" class="sidepanel" aria-label="side panel" aria-hidden="false">
+			<div class="sidepanel-inner-wrapper">
+				<nav class="sidepanel-tabs-wrapper" aria-label="sidepanel tab navigation">
+					<ul class="sidepanel-tabs">
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-1">
+								List
+							</a>
+						</li>
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-2">
+								Pin
+							</a>
+						</li>
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-3">
+								Mark
+							</a>
+						</li>
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-4">
+								Bookmarks
+							</a>
+						</li>
+						<li class="sidepanel-tab">
+							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-5">
+								Settings
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="sidepanel-content-wrapper">
+					<div class="sidepanel-content">
+						<div class="sidepanel-tab-content" data-tab-content="tab-1">
+							<h4>Content 1</h4>
+							<p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
+								diam.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
+								massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
+								scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
+								massa,
+								in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
+								non
+								turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
+						</div>
+						<div class="sidepanel-tab-content" data-tab-content="tab-2">
+							<h4>Content 2</h4>
+							<p>Etiam varius in neque a tristique. Maecenas euismod pharetra scelerisque. Nam in pretium nulla, vel blandit risus. Duis posuere egestas nisi, vitae
+								iaculis tortor varius eget. Morbi molestie sem in varius vulputate. Cras enim sapien, malesuada id nisi eu, volutpat congue leo. Praesent aliquet
+								ipsum
+								id lectus consequat rutrum. In vitae dolor pellentesque dolor scelerisque condimentum eget at ligula. Integer vel turpis eros. Cras at hendrerit
+								mauris.
+								Aliquam erat volutpat. Quisque vehicula pharetra mauris, nec finibus augue posuere ut. Etiam condimentum lacus at purus luctus finibus.</p>
+						</div>
+						<div class="sidepanel-tab-content" data-tab-content="tab-3">
+							<h4>Content 3</h4>
+							<p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
+								diam.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
+								massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
+								scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
+								massa,
+								in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
+								non
+								turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
+						</div>
+						<div class="sidepanel-tab-content" data-tab-content="tab-4">
+							<h4>Content 4</h4>
+							<p>Etiam varius in neque a tristique. Maecenas euismod pharetra scelerisque. Nam in pretium nulla, vel blandit risus. Duis posuere egestas nisi, vitae
+								iaculis tortor varius eget. Morbi molestie sem in varius vulputate. Cras enim sapien, malesuada id nisi eu, volutpat congue leo. Praesent aliquet
+								ipsum
+								id lectus consequat rutrum. In vitae dolor pellentesque dolor scelerisque condimentum eget at ligula. Integer vel turpis eros. Cras at hendrerit
+								mauris.
+								Aliquam erat volutpat. Quisque vehicula pharetra mauris, nec finibus augue posuere ut. Etiam condimentum lacus at purus luctus finibus.</p>
+						</div>
+						<div class="sidepanel-tab-content" data-tab-content="tab-5">
+							<h4>Content 5</h4>
+							<p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
+								diam.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
+								massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
+								scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
+								massa,
+								in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
+								non
+								turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
+							<p>Etiam varius in neque a tristique. Maecenas euismod pharetra scelerisque. Nam in pretium nulla, vel blandit risus. Duis posuere egestas nisi, vitae
+								iaculis tortor varius eget. Morbi molestie sem in varius vulputate. Cras enim sapien, malesuada id nisi eu, volutpat congue leo. Praesent aliquet
+								ipsum
+								id lectus consequat rutrum. In vitae dolor pellentesque dolor scelerisque condimentum eget at ligula. Integer vel turpis eros. Cras at hendrerit
+								mauris.
+								Aliquam erat volutpat. Quisque vehicula pharetra mauris, nec finibus augue posuere ut. Etiam condimentum lacus at purus luctus finibus.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidepanel-toggle-container">
+				<button class="sidepanel-toggle-button" type="button" aria-label="toggle side panel"></button>
+			</div>
+		</div> -->
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		crossorigin=""></script>
+	<script src="js/leaflet-sidepanel.min.js"></script>
+	<script src="js/L.switchBasemap.js"></script>
+	<script>
+		
+
+		const map = L.map('map', {
+			zoomControl: false
+		}).setView([51.505, -0.09], 13);
+		L.control.scale({
+			position: 'topleft'
+		}).addTo(map);
+		L.control.zoom({
+			position: 'bottomright'
+		}).addTo(map);
+		L.basemapsSwitcher([
+		{
+			layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: ''
+			}).addTo(map), //DEFAULT MAP
+			icon: './assets/images/img1.png',
+			name: ''
+		},
+		{
+			layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png',{
+			detectRetina: true,
+			attribution: ''
+			}),
+			icon: './assets/images/img2.png',
+			name: ''
+		},
+		{
+			layer: L.tileLayer('http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+			attribution: ''
+			}),
+			icon: './assets/images/img3.png',
+			name: ''
+		},
+		], { position: 'bottomleft' }).addTo(map);
+		L.marker([51.5, -0.09]).addTo(map)
+			.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+			.openPopup()
+			.bindTooltip('A pretty CSS3 tooltip.<br> Easily customizable.');
+
+		const sidepanelLeft = L.control.sidepanel('mySidepanelLeft', {
+			tabsPosition: 'left',
+			startTab: 'tab-5'
+		}).addTo(map);
+		const sidepanelRight = L.control.sidepanel('mySidepanelRight', {
+			panelPosition: 'right',
+			tabsPosition: 'top',
+			pushControls: true,
+			darkMode: true,
+			startTab: 2
+		}).addTo(map);
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		L.marker([51.5, -0.09]).addTo(map)
+			.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+			.openPopup()
+			.bindTooltip('A pretty CSS3 tooltip.<br> Easily customizable.');
+
+		
+		
+		
+	</script>
+	<script>
+		
+	</script>
+
+</body>
+
+</html>
