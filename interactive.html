@@ -11,6 +11,7 @@
 	<link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="css/widgets.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="icon" type="image/x-icon" href="assets/icon.png">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -172,64 +173,91 @@
 							<br>
 							<div class="flex text-medium">
 							<label class="switch">
-								<input type="checkbox">
+								<input type="checkbox" id="adm_kabkota">
 								<span class="slider round"></span>
 							  </label>
 							  <span>Batas Adm Kab/Kota</span>
 							</div>
 							<div class="flex text-medium">
 								<label class="switch">
-								  <input type="checkbox">
+									<input type="checkbox" id="adm_kec">
+									<span class="slider round"></span>
+								  </label>
+								  <span>Batas Adm Kecamatan</span>
+								</div>
+							<div class="flex text-medium">
+							<label class="switch">
+								<input type="checkbox" id="adm_desa">
+								<span class="slider round"></span>
+							  </label>
+							  <span>Batas Adm Desa</span>
+							  <p class="text-ssmall">[Sumber data : webgis BIG]</em></p>
+							  <hr>
+							  <br>
+							</div>
+							<p class="text-medium highlight-text">Areal Kawasan Hutan</p>
+							<div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox" id="kph">
+								  <span class="slider round"></span>
+								</label>
+								<span>Kesatuan Pengelola Hutan</span>
+							  </div>
+							<div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox" id="fungsi_kawasan">
 								  <span class="slider round"></span>
 								</label>
 								<span>Fungsi Kawasan Hutan</span>
 							  </div>
-							<div class="flex text-medium">
-							  <label class="switch">
-								<input type="checkbox">
-								<span class="slider round"></span>
-							  </label>
-							  <span>Kesatuan Pengelola Hutan</span>
-							</div>
-						
-							<br>
-		
+							  <div class="custom-legend noselect" style="width: 210px; margin-top: -5px; margin-left: 20px;" >
+								<div class="legend-scale2">
+								  <ul class="legend-labels">
+									<li><span style="background:#02ad00;"></span>Hutan Lindung</li>
+									<li><span style="background:#ffff00;"></span>Hutan Produksi</li>
+									<li><span style="background:#8af200;"></span>Hutan Produksi Terbatas</li>
+									<li><span style="background:#ad3fff;"></span>Kawasan Pelestarian Alam</li>
+								  </ul>
+								</div>
+							  </div>		
 						
 							<p class="text-medium highlight-text">Areal Izin Perhutanan Sosial</p>
 							<div class="flex text-medium">
 							<label class="switch">
-								<input type="checkbox">
+								<input type="checkbox" id="ps_hd">
 								<span class="slider round"></span>
 							  </label>
 							  <span>Hutan Desa</span>
 							</div>
 							<div class="flex text-medium">
 								<label class="switch">
-								<input type="checkbox">
+								<input type="checkbox" id="ps_hkm">
 								<span class="slider round"></span>
 								</label>
 								<span>Hutan Kemasyarakatan</span>
 							</div>
 							<div class="flex text-medium">
 							<label class="switch">
-								<input type="checkbox">
+								<input type="checkbox" id="ps_htr">
 								<span class="slider round"></span>
 							  </label>
 							  <span>Hutan Tanaman Rakyat</span>
 							</div>
 							<div class="flex text-medium">
 							<label class="switch">
-								<input type="checkbox">
+								<input type="checkbox" id="ps_ha">
 								<span class="slider round"></span>
 							  </label>
 							  <span>Hutan Adat</span>
 							</div>
 							<div class="flex text-medium">
-							<label class="switch">
+							<label class="switch" id="ps_kk">
 								<input type="checkbox">
 								<span class="slider round"></span>
 							  </label>
+							
 							  <span>Kemitraan Kehutanan</span>
+								
 							  <p class="text-ssmall">[Sumber data : webgis KLHK]</em></p>
 							<hr>
 							</div>
@@ -249,40 +277,62 @@
 								  <span class="slider2 round"></span>
 								</label>
 								<span>*Foto Udara </span>
+							<div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox" id="fungsi_kawasan">
+								  <span class="slider2 round"></span>
+								</label>
+								<span>*Distribusi Potensi Agroforestri</span>
+							  </div>
+							  <div class="custom-legend noselect" style="width: 210px; margin-top: -5px; margin-left: 20px;" >
+								<div class="legend-scale2">
+								  <ul class="legend-labels2">
+									<li><span style="background:yellowgreen;"></span>HHBK</li>
+									<li><span style="background:yellow;"></span>non HHBK</li>
+									<li><span style="background:blue;"></span>Jasa Lingkungan</li>
+								  </ul>
+								</div>
+							  </div>
+							<div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox" id="fungsi_kawasan">
+								  <span class="slider2 round"></span>
+								</label>
+								<span>*Monitoring Penanaman</span>
+							  </div>
+							  <div class="custom-legend noselect" style="width: 210px; margin-top: -5px; margin-left: 20px;" >
+								<div class="legend-scale2">
+								  <ul class="legend-labels2">
+									<li><span style="background:orangered;"></span>MPTS</li>
+									<li><span style="background:orange;"></span>non MPTS</li>
+								  </ul>
+								</div>
+							  </div>
 								<p class="text-ssmall"><em>*Lapisan tidak tersedia untuk umum</em></p>
 							  </div>
 							  <hr>
 							  <br>
 
 							  <p class="text-medium highlight-text">Indikatif Kelas Tutupan Hutan</p>
+							
 							  <div class="flex text-medium">
 							  <label class="switch">
-								  <input type="checkbox">
+								  <input type="checkbox" id="hcs_forest">
 								  <span class="slider round"></span>
 								</label>
-								<span>Hutan Kerapatan Tinggi</span>
+								<span>Kelas Hutan 2020</span>
 							  </div>
-							  <div class="flex text-medium">
-								  <label class="switch">
-								  <input type="checkbox">
-								  <span class="slider round"></span>
-								  </label>
-								  <span>Hutan Kerapatan Sedang</span>
-							  </div>
-							  <div class="flex text-medium">
-							  <label class="switch">
-								  <input type="checkbox">
-								  <span class="slider round"></span>
-								</label>
-								<span>Hutan Kerapatan Rendah</span>
-							  </div>
-							  <div class="flex text-medium">
-							  <label class="switch">
-								  <input type="checkbox">
-								  <span class="slider round"></span>
-								</label>
-								<span>Hutan Regenerasi Muda</span>
-							  </div>
+							  <div class="custom-legend noselect" style="width: 210px; margin-top: -5px; margin-left: 20px;" >
+								<div class="legend-scale2">
+								  <ul class="legend-labels">
+									<li><span style="background:green; opacity: 0.8;"></span>Kerapatan Tinggi</li>
+									<li><span style="background:green; opacity: 0.6;"></span>Kerapatan Sedang</li>
+									<li><span style="background:green; opacity: 0.4;"></span>Kerapatan Rendah</li>
+									<li><span style="background:green; opacity: 0.2;"></span>Regenerasi Muda</li>
+								  </ul>
+								</div>
+							  </div>	
+							  
 							 
 								  <p class="text-ssmall">[Sumber data : Indicative High Carbon Stock Maps 2020]</p>
 								  <hr>
@@ -292,11 +342,20 @@
 							  
 							  <div class="flex text-medium">
 							  <label class="switch">
-								  <input type="checkbox">
+								  <input type="checkbox" id="def_21_22">
 								  <span class="slider round"></span>
 								</label>
 								<span>Deforestasi 2021 s.d 2023</span>
 							  </div>
+							  <div class="custom-legend noselect" style="width: 210px; margin-top: -5px; margin-left: 20px;" >
+								<div class="legend-scale2">
+								  <ul class="legend-labels">
+									<li><span style="background:red; opacity: 0.25;"></span>2021</li>
+									<li><span style="background:red; opacity: 0.5"></span>2022</li>
+									<li><span style="background:red; opacity: 0.75"></span>2023</li>
+								  </ul>
+								</div>
+							  </div>		
 							  <p class="text-medium">*Peringatan Terpadu 2024 :</p>
 							
 							
@@ -304,42 +363,42 @@
 									<div class="flex-item flex-item-stretch flex-column">
 							  <div class="flex text-medium">
 							  <label class="switch">
-								<input type="checkbox">
+								<input type="checkbox" id="alert1_24">
 								<span class="slider round"></span>
 							  </label>
 							  <span>Januari</span>
 							</div>
 							  <div class="flex text-medium">
 								  <label class="switch">
-								  <input type="checkbox">
+								  <input type="checkbox" id="alert2_24">
 								  <span class="slider round"></span>
 								  </label>
 								  <span>Februari</span>
 							  </div>
 							  <div class="flex text-medium">
 								<label class="switch">
-								<input type="checkbox">
+								<input type="checkbox" id="alert3_24">
 								<span class="slider round"></span>
 								</label>
 								<span>Maret</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert4_24">
 									<span class="slider round"></span>
 									</label>
 									<span>April</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert5_24">
 									<span class="slider round"></span>
 									</label>
 									<span>Mei</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert6_24">
 									<span class="slider round"></span>
 									</label>
 									<span>Juni</span>
@@ -351,42 +410,42 @@
 								<div class="flex-item flex-item-stretch flex-column"  style="margin-left: -20px;"> 
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert7_24">
 									<span class="slider round"></span>
 									</label>
 									<span>Juli</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert8_24">
 									<span class="slider round"></span>
 									</label>
 									<span>Agustus</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert9_24">
 									<span class="slider round"></span>
 									</label>
 									<span>September</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert10_24">
 									<span class="slider round"></span>
 									</label>
 									<span>Oktober</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert11_24">
 									<span class="slider2 round"></span>
 									</label>
 									<span>November</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
-									<input type="checkbox">
+									<input type="checkbox" id="alert12_24">
 									<span class="slider2 round"></span>
 									</label>
 									<span>Desember</span>
@@ -396,11 +455,12 @@
 							
 								
 						
-								<p class="text-ssmall "><em>*Peringatan terpadu adalah peringatan yang menunjukkan titik lokasi dimana terindikasi 
-									telah terjadi perubahan tutupan yang terekam melalui tangkapan citra satelit. 
+								<p class="text-ssmall "><em>*Peringatan terpadu adalah peringatan yang menunjukkan titik lokasi dimana telah terindikasi 
+									terjadi perubahan tutupan yang terekam melalui tangkapan citra satelit. 
 								</em></p>
 								  <p class="text-ssmall ">[Sumber data : Global Forest Watch | Data deforestasi dan peringatan terpadu yang ditampilkan pada peta interaktif
-									telah disesuaikan, dengan hanya menampilkan data geolokasi pada kelas indikatif tutupan hutan yang berada dalam status fungsi kawasan hutan]</p>
+									telah dimodifikasi, dengan hanya menampilkan data geolokasi dengan kriteria (luas minimum 0.5 ha, tingkat kepastian tinggi) 
+									yang terjadi pada kelas indikatif tutupan hutan yang berada dalam status fungsi kawasan hutan]</p>
 								
 						</div>
 						<div class="sidepanel-tab-content" data-tab-content="tab-2">
@@ -546,14 +606,16 @@
 		crossorigin=""></script>
 	<script src="js/leaflet-sidepanel.min.js"></script>
 	<script src="js/L.switchBasemap.js"></script>
+	<script src="data/FungsiKawasan_1.js"></script>
 	<script>
 		
 
 		const map = L.map('map', {
 			zoomControl: false
-		}).setView([51.505, -0.09], 13);
+		}).setView([-4.917867, 105.020628], 8);
 		L.control.scale({
-			position: 'topleft'
+			position: 'topleft',
+			imperial: false
 		}).addTo(map);
 		L.control.zoom({
 			position: 'bottomright'
@@ -582,10 +644,67 @@
 			name: ''
 		},
 		], { position: 'bottomleft' }).addTo(map);
-		L.marker([51.5, -0.09]).addTo(map)
-			.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-			.openPopup()
-			.bindTooltip('A pretty CSS3 tooltip.<br> Easily customizable.');
+		
+		function style_FungsiKawasan_1_0(feature) {
+                      switch(String(feature.properties['Kode'])) {
+                          case 'HL':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(2,173,0,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                          case 'HP':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(255,255,0,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                          case 'HPT':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(138,242,0,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                          case 'KPA':
+                              return {
+                          
+                          stroke: false, 
+                          fill: true,
+                          fillOpacity: 0.5,
+                          fillColor: 'rgba(173,63,255,1.0)',
+                          interactive: false,
+                      }
+                              break;
+                      }
+                  }
+        var fungsi_kawasan = L.geoJSON(json_FungsiKawasan,{style:style_FungsiKawasan_1_0});
+		$('#fungsi_kawasan:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(fungsi_kawasan);
+           
+        } else {
+            map.removeLayer(fungsi_kawasan);
+        
+
+        }
+   		});
+
+		
+	
 
 		const sidepanelLeft = L.control.sidepanel('mySidepanelLeft', {
 			tabsPosition: 'left',
@@ -598,14 +717,9 @@
 			darkMode: true,
 			startTab: 2
 		}).addTo(map);
-		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
 
-		L.marker([51.5, -0.09]).addTo(map)
-			.bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-			.openPopup()
-			.bindTooltip('A pretty CSS3 tooltip.<br> Easily customizable.');
+
+		
 
 		
 		
