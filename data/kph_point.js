@@ -603,5 +603,26 @@ var kph_json = {
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Waigeo", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 130.941433297, -0.154278231038 ] } },
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Watu Ata", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 120.93504016, -8.773868050340001 ] } },
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Yogyakarta", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 110.51413385, -8.01931680681 ] } }
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHL", "ORGANISASI": null, "UNIT_KPH": "UNIT VII" }, "geometry": { "type": "Point", "coordinates": [ 139.911809175, -3.31930657529 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHL", "ORGANISASI": null, "UNIT_KPH": "UNIT XVIII" }, "geometry": { "type": "Point", "coordinates": [ 136.781738557000011, -2.53276149503 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHL", "ORGANISASI": null, "UNIT_KPH": "UNIT XX" }, "geometry": { "type": "Point", "coordinates": [ 135.904588399, -0.950926917229 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT I" }, "geometry": { "type": "Point", "coordinates": [ 140.924451955, -2.71621250789 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT II" }, "geometry": { "type": "Point", "coordinates": [ 140.622469267000014, -2.97830916105 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT III" }, "geometry": { "type": "Point", "coordinates": [ 140.603317795, -3.2217474449 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT IV" }, "geometry": { "type": "Point", "coordinates": [ 140.706678702, -3.53755859491 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT IX" }, "geometry": { "type": "Point", "coordinates": [ 139.321954621, -2.37840846445 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT V" }, "geometry": { "type": "Point", "coordinates": [ 140.020081084, -2.86474011802 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT VI" }, "geometry": { "type": "Point", "coordinates": [ 139.710394797, -2.68606612373 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT VIII" }, "geometry": { "type": "Point", "coordinates": [ 139.317329346, -3.14400417852 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT X" }, "geometry": { "type": "Point", "coordinates": [ 138.854162257000013, -2.313837275 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XI" }, "geometry": { "type": "Point", "coordinates": [ 138.462304681, -1.94910653608 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XII" }, "geometry": { "type": "Point", "coordinates": [ 137.633485990999986, -1.7057522135 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XIII" }, "geometry": { "type": "Point", "coordinates": [ 138.208925653, -2.7069925175 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XIV" }, "geometry": { "type": "Point", "coordinates": [ 137.719394881999989, -2.67762233532 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XIX" }, "geometry": { "type": "Point", "coordinates": [ 137.182888530000014, -2.73153348184 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XV" }, "geometry": { "type": "Point", "coordinates": [ 137.552668664, -2.35582523991 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XVI" }, "geometry": { "type": "Point", "coordinates": [ 136.716396494, -2.95883527548 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XVII" }, "geometry": { "type": "Point", "coordinates": [ 136.405957338, -2.75992189888 ] } },
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHP", "ORGANISASI": null, "UNIT_KPH": "UNIT XXI" }, "geometry": { "type": "Point", "coordinates": [ 136.03486181, -1.70077650062 ] } }
 ]
 }
