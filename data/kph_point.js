@@ -602,7 +602,7 @@ var kph_json = {
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Wae Wuul", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 119.830087822, -8.573354868399999 ] } },
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Waigeo", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 130.941433297, -0.154278231038 ] } },
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Watu Ata", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 120.93504016, -8.773868050340001 ] } },
-{ "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Yogyakarta", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 110.51413385, -8.01931680681 ] } }
+{ "type": "Feature", "properties": { "JENIS_KPH": "KPHK", "ORGANISASI": "Yogyakarta", "UNIT_KPH": null }, "geometry": { "type": "Point", "coordinates": [ 110.51413385, -8.01931680681 ] } },
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHL", "ORGANISASI": null, "UNIT_KPH": "UNIT VII" }, "geometry": { "type": "Point", "coordinates": [ 139.911809175, -3.31930657529 ] } },
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHL", "ORGANISASI": null, "UNIT_KPH": "UNIT XVIII" }, "geometry": { "type": "Point", "coordinates": [ 136.781738557000011, -2.53276149503 ] } },
 { "type": "Feature", "properties": { "JENIS_KPH": "KPHL", "ORGANISASI": null, "UNIT_KPH": "UNIT XX" }, "geometry": { "type": "Point", "coordinates": [ 135.904588399, -0.950926917229 ] } },
