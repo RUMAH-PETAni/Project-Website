@@ -20,6 +20,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="css/L.switchBasemap.css" media="screen" rel="stylesheet" type="text/css" />
 
+
 	<style>
 		html,
 		body {
@@ -120,17 +121,8 @@
 			</div>
 		  </div>
 		</div>
-	  </div>
-	<!-- <header class="header">
-		<h1>Leaflet Sidepanel <a href="https://github.com/maxwell-ilai/Leaflet.SidePanel">
-				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-					<path
-						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-				</svg><span>Github</span>
-			</a>
-		</h1>
-	</header> -->
-	<!-- Map ID -->
+	</div>
+	
 	<div id="map">
 		<!-- Side Panel left -->
 		<div id="mySidepanelLeft" class="sidepanel" aria-label="side panel" aria-hidden="false">
@@ -479,108 +471,6 @@
 				<button class="sidepanel-toggle-button" type="button" aria-label="toggle side panel"></button>
 			</div>
 		</div>
-
-		<!-- Side Panel right -->
-		<!-- <div id="mySidepanelRight" class="sidepanel" aria-label="side panel" aria-hidden="false">
-			<div class="sidepanel-inner-wrapper">
-				<nav class="sidepanel-tabs-wrapper" aria-label="sidepanel tab navigation">
-					<ul class="sidepanel-tabs">
-						<li class="sidepanel-tab">
-							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-1">
-								List
-							</a>
-						</li>
-						<li class="sidepanel-tab">
-							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-2">
-								Pin
-							</a>
-						</li>
-						<li class="sidepanel-tab">
-							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-3">
-								Mark
-							</a>
-						</li>
-						<li class="sidepanel-tab">
-							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-4">
-								Bookmarks
-							</a>
-						</li>
-						<li class="sidepanel-tab">
-							<a href="#" class="sidebar-tab-link" role="tab" data-tab-link="tab-5">
-								Settings
-							</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="sidepanel-content-wrapper">
-					<div class="sidepanel-content">
-						<div class="sidepanel-tab-content" data-tab-content="tab-1">
-							<h4>Content 1</h4>
-							<p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
-								diam.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
-								massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
-								scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
-								massa,
-								in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
-								non
-								turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
-						</div>
-						<div class="sidepanel-tab-content" data-tab-content="tab-2">
-							<h4>Content 2</h4>
-							<p>Etiam varius in neque a tristique. Maecenas euismod pharetra scelerisque. Nam in pretium nulla, vel blandit risus. Duis posuere egestas nisi, vitae
-								iaculis tortor varius eget. Morbi molestie sem in varius vulputate. Cras enim sapien, malesuada id nisi eu, volutpat congue leo. Praesent aliquet
-								ipsum
-								id lectus consequat rutrum. In vitae dolor pellentesque dolor scelerisque condimentum eget at ligula. Integer vel turpis eros. Cras at hendrerit
-								mauris.
-								Aliquam erat volutpat. Quisque vehicula pharetra mauris, nec finibus augue posuere ut. Etiam condimentum lacus at purus luctus finibus.</p>
-						</div>
-						<div class="sidepanel-tab-content" data-tab-content="tab-3">
-							<h4>Content 3</h4>
-							<p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
-								diam.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
-								massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
-								scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
-								massa,
-								in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
-								non
-								turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
-						</div>
-						<div class="sidepanel-tab-content" data-tab-content="tab-4">
-							<h4>Content 4</h4>
-							<p>Etiam varius in neque a tristique. Maecenas euismod pharetra scelerisque. Nam in pretium nulla, vel blandit risus. Duis posuere egestas nisi, vitae
-								iaculis tortor varius eget. Morbi molestie sem in varius vulputate. Cras enim sapien, malesuada id nisi eu, volutpat congue leo. Praesent aliquet
-								ipsum
-								id lectus consequat rutrum. In vitae dolor pellentesque dolor scelerisque condimentum eget at ligula. Integer vel turpis eros. Cras at hendrerit
-								mauris.
-								Aliquam erat volutpat. Quisque vehicula pharetra mauris, nec finibus augue posuere ut. Etiam condimentum lacus at purus luctus finibus.</p>
-						</div>
-						<div class="sidepanel-tab-content" data-tab-content="tab-5">
-							<h4>Content 5</h4>
-							<p>Nam nec lacinia purus, in accumsan arcu. Aenean at maximus tortor, eget porttitor leo. Fusce justo lorem, dictum nec rutrum sed, mattis faucibus
-								diam.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper ex sagittis lacus gravida interdum quis sit amet justo. Nunc posuere
-								massa et feugiat efficitur. Donec est magna, lobortis sit amet ligula ut, vehicula posuere diam. Suspendisse aliquet blandit velit, consectetur
-								scelerisque libero porttitor eu. Praesent faucibus dignissim maximus. Vestibulum porta eu tellus sit amet ultricies. Integer aliquet vestibulum
-								massa,
-								in interdum arcu commodo ac. Curabitur sit amet cursus ipsum. Donec ut diam orci. Fusce odio diam, laoreet non elit sed, suscipit mollis leo. Fusce
-								non
-								turpis faucibus, placerat sapien quis, varius ligula. Praesent ac magna id tortor ultricies ultricies quis nec quam.</p>
-							<p>Etiam varius in neque a tristique. Maecenas euismod pharetra scelerisque. Nam in pretium nulla, vel blandit risus. Duis posuere egestas nisi, vitae
-								iaculis tortor varius eget. Morbi molestie sem in varius vulputate. Cras enim sapien, malesuada id nisi eu, volutpat congue leo. Praesent aliquet
-								ipsum
-								id lectus consequat rutrum. In vitae dolor pellentesque dolor scelerisque condimentum eget at ligula. Integer vel turpis eros. Cras at hendrerit
-								mauris.
-								Aliquam erat volutpat. Quisque vehicula pharetra mauris, nec finibus augue posuere ut. Etiam condimentum lacus at purus luctus finibus.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="sidepanel-toggle-container">
-				<button class="sidepanel-toggle-button" type="button" aria-label="toggle side panel"></button>
-			</div>
-		</div> -->
 	</div>
 
 	<!-- Scripts -->
@@ -588,19 +478,20 @@
 		crossorigin=""></script>
 	<script src="js/leaflet-sidepanel.min.js"></script>
 	<script src="js/L.switchBasemap.js"></script>
-	<script src="https://unpkg.com/esri-leaflet@3.0.12/dist/esri-leaflet.js"></script>
-	<script src="https://unpkg.com/esri-leaflet-renderers@3.0.1" crossorigin=""></script>
-	<script src="https://unpkg.com/esri-leaflet-vector@4.2.5/dist/esri-leaflet-vector.js" crossorigin=""></script>
+
+
 	<script src="https://github.com/ellipsis-drive/ellipsis-js-util/releases/download/1.1.0/ellipsis-js-util-1.1.0.js"></script>
 	<script src="https://github.com/ellipsis-drive/leaflet-package/releases/download/3.1.0/leaflet-ellipsis-3.1.0.js"></script>
+	<script src="data/kph_point.js"></script>
 	<script src="data/adm_kabkota_0.js"></script>
 	<script src="data/adm_kec_1.js"></script>
 	<script src="data/kph_2.js"></script>
 	<script src="data/FungsiKawasan_1.js"></script>
 	<script>
+	
 		
 
-		const map = L.map('map', {
+		const map = L.map("map", {
 			zoomControl: false
 		}).setView([-4.917867, 105.020628], 8);
 		L.control.scale({
@@ -634,96 +525,7 @@
 			name: ''
 		},
 		], { position: 'bottomleft' }).addTo(map);
-		
-		// function style_FungsiKawasan_1_0(feature) {
-        //               switch(String(feature.properties['Kode'])) {
-        //                   case 'HL':
-        //                       return {
-                          
-        //                   stroke: false, 
-        //                   fill: true,
-        //                   fillOpacity: 0.5,
-        //                   fillColor: 'rgba(2,173,0,1.0)',
-        //                   interactive: false,
-        //               }
-        //                       break;
-        //                   case 'HP':
-        //                       return {
-                          
-        //                   stroke: false, 
-        //                   fill: true,
-        //                   fillOpacity: 0.5,
-        //                   fillColor: 'rgba(255,255,0,1.0)',
-        //                   interactive: false,
-        //               }
-        //                       break;
-        //                   case 'HPT':
-        //                       return {
-                          
-        //                   stroke: false, 
-        //                   fill: true,
-        //                   fillOpacity: 0.5,
-        //                   fillColor: 'rgba(138,242,0,1.0)',
-        //                   interactive: false,
-        //               }
-        //                       break;
-        //                   case 'KPA':
-        //                       return {
-                          
-        //                   stroke: false, 
-        //                   fill: true,
-        //                   fillOpacity: 0.5,
-        //                   fillColor: 'rgba(173,63,255,1.0)',
-        //                   interactive: false,
-        //               }
-        //                       break;
-        //               }
-        //           }
-		
-		
-				  
-		// function style_adm_kabkota_0_0() {
-        //     return {
-               
-        //         opacity: 1,
-        //         color: 'rgba(0,0,0,1.0)',
-        //         dashArray: '',
-        //         lineCap: 'square',
-        //         lineJoin: 'bevel',
-        //         weight: 1.0,
-        //         fillOpacity: 0,
-        //         interactive: true,
-        //     }
-        // }
-		// function style_adm_kec_1_0() {
-        //     return {
-           
-        //         opacity: 1,
-        //         color: 'rgba(0,0,0,1.0)',
-        //         dashArray: '',
-        //         lineCap: 'square',
-        //         lineJoin: 'bevel',
-        //         weight: 1,
-        //         fillOpacity: 0,
-        //         interactive: true,
-        //     }
-        // }
 
-		// function style_kph_2_0() {
-        //     return {
-          
-        //         opacity: 1,
-        //         color: 'rgba(0,0,0,1.0)',
-        //         dashArray: '',
-        //         lineCap: 'butt',
-        //         lineJoin: 'miter',
-        //         weight: 1.0, 
-        //         fill: true,
-        //         fillOpacity: 0.5,
-        //         fillColor: 'rgba(148,209,128,1.0)',
-        //         interactive: true,
-        //     }
-        // }
 		
 		var adm_kabkota = L.tileLayer.wms('https://aws.simontini.id/geoserver/wms', {
         layers: 'administrative_boundaries',
@@ -741,17 +543,7 @@
         }
    		});
 				
-		//    var adm_kec = L.geoJSON(json_adm_kec_1,{style:style_adm_kec_1_0});
-		// $('#adm_kec:checkbox').on('change', function() {
-        // var checkbox = $(this);
-        // // toggle the layer
-        // if ($(checkbox).is(':checked')) {
-        //     map.addLayer(adm_kec);
-           
-        // } else {
-        //     map.removeLayer(adm_kec);
-        // }
-   		// });
+
 
 		var fungsi_kawasan = L.tileLayer.wms('https://aws.simontini.id/geoserver/wms', {
         layers: 'simontini:Forest_estate_adm',
@@ -767,8 +559,9 @@
             map.removeLayer(fungsi_kawasan);
         }
    		});
-		   
-	
+
+
+		
 
 		var hcs_forest = L.tileLayer('https://api.ellipsis-drive.com/v3/path/40f37759-d00d-49a8-afa0-5271118668fe/raster/timestamp/47db79b2-25bd-4693-a555-090b01d17596/tile/{z}/{x}/{y}?style=5112e188-cece-4eca-9a71-0ce02a44b11d&token=epat_DXqmh8q0t5Gzr8ge9xnjQBN5cDyRVGBuzRSLwPc0m0WumJ3KFcehrOFbgtkEfkIJ', {
 			attribution: ''
@@ -783,36 +576,34 @@
         }
    		});
 
-	
-		//    var swapetaIcon = L.icon({
-        //       iconUrl: "data/swapetaicon.svg",        
-        //       iconSize:     [30, 30], // size of the icon
-        //       popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-        //       });
+		   var kphIcon = L.icon({
+              iconUrl: "data/kphicon.svg",
+            
+          
+              iconSize:     [50, 50], // size of the icon
+              popupAnchor:  [-3, -3] // point from which the popup should open relative to the iconAnchor
+              });
 
-		// var kph = 
-        //       L.marker([-5.499801, 104.440814], {icon: swapetaIcon})
-        //       .bindTooltip('GAPOKTANHUT LESTARI SEJAHTERA<br>SK.10098/MENLHK-PSKL/PKPS/PSL.0/12/2019');
-        //       L.marker([-5.479615, 104.436567], {icon: swapetaIcon})
-        //       .bindTooltip('KTH TUMPAK REJO 1<br>SK.10761/MENLHK-PSKL/PKPS/PSL.0/9/2023');
-        //       L.marker([-5.476617, 104.43145], {icon: swapetaIcon})
-        //       .bindTooltip('KTH TUMPAK REJO 2<br>SK.10541/MENLHK-PSKL/PKPS/PSL.0/9/2023');
-        //       L.marker([-5.477983, 104.440795], {icon: swapetaIcon})
-        //       .bindTooltip('KTH TUMPAK REJO 3<br>SK.10539/MENLHK-PSKL/PKPS/PSL.0/9/2023');
-        //       L.marker([-5.447621, 104.691165])
-        //       .bindTooltip('KTH BAKER LESTARI<br>Proses pengajuan izin');
+		var kph = L.geoJSON(kph_json, {
+		pointToLayer: function (feature, latlng) {
+		feature.properties.myKey = feature.properties.JENIS_KPH + ', ' + feature.properties.ORGANISASI + ', ' + feature.properties.UNIT_KPH
+    	return L.marker(latlng, {icon: kphIcon})
+		},
+		onEachFeature: function(feature, layer){
+            layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi:</b>"+ feature.properties.ORGANISASI);
+        }
+    	});
+		$('#kph:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(kph);
+        } else {
+            map.removeLayer(kph);
+        }
+   		});
 
-		
-		// $('#kph:checkbox').on('change', function() {
-        // var checkbox = $(this);
-        // // toggle the layer
-        // if ($(checkbox).is(':checked')) {
-        //     map.addLayer(kph);
-        // } else {
-        //     map.removeLayer(kph);
-        // }
-   		// });
-	
+
 
 		const sidepanelLeft = L.control.sidepanel('mySidepanelLeft', {
 			tabsPosition: 'left',
