@@ -170,13 +170,7 @@
 							  </label>
 							  <span>Batas Adm Kab/Kota</span>
 							</div>
-							<div class="flex text-medium">
-								<label class="switch">
-								  <input type="checkbox" id="kph">
-								  <span class="slider round"></span>
-								</label>
-								<span>Kesatuan Pengelola Hutan</span>
-							  </div>
+					
 							<div class="flex text-medium">
 								<label class="switch">
 								  <input type="checkbox" id="fungsi_kawasan">
@@ -193,9 +187,19 @@
 									<li><span style="background:#ad3fff;"></span>Kawasan Pelestarian Alam</li>
 								  </ul>
 								</div>
+							  </div>
+							  <div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox" id="kph">
+								  <span class="slider round"></span>
+								</label>
+								<span>Kesatuan Pengelola Hutan</span>
 							  </div>		
 						
-							<p class="text-medium highlight-text">Areal Izin Perhutanan Sosial</p>
+							<p class="text-medium highlight-text">Izin Perhutanan Sosial</p>
+						
+					
+				
 							<div class="flex text-medium">
 							<label class="switch">
 								<input type="checkbox" id="ps_hd">
@@ -224,19 +228,18 @@
 							  </label>
 							  <span>Hutan Adat</span>
 							</div>
-							<div class="flex text-medium">
-							<label class="switch" id="ps_kk">
-								<input type="checkbox">
-								<span class="slider round"></span>
-							  </label>
-							
-							  <span>Kemitraan Kehutanan</span>
-								
-							  <p class="text-ssmall">[Sumber data : webgis KLHK]</em></p>
-							<hr>
-							</div>
-							
 
+							<div class="flex text-medium">
+								<label class="switch">
+									<input type="checkbox" id="ps_kk">
+									<span class="slider round"></span>
+								  </label>
+								  <span>Kemitraan Kehutanan</span>
+								</div>
+					
+							<p class="text-ssmall">[Sumber data : webgis KLHK]</em></p>
+							<hr>
+							
 							<div class="flex text-medium">
 							  <label class="switch">
 								<input type="checkbox">
@@ -305,9 +308,7 @@
 									<li><span style="background:#DBDF00; opacity: 0.2;"></span>Regenerasi Muda</li>
 								  </ul>
 								</div>
-							  </div>	
-							  
-							 
+							  </div>						 
 								  <p class="text-ssmall">[Sumber data : Indicative High Carbon Stock Maps 2020]</p>
 								  <hr>
 								  <br>
@@ -331,8 +332,7 @@
 								</div>
 							  </div>		
 							  <p class="text-medium">*Peringatan Terpadu 2024 :</p>
-							
-							
+														
 								<div class="flex-row" style="margin-left: -20px;">
 									<div class="flex-item flex-item-stretch flex-column">
 							  <div class="flex text-medium">
@@ -378,9 +378,7 @@
 									<span>Juni</span>
 								</div>
 								</div>
-								
-							
-								
+																
 								<div class="flex-item flex-item-stretch flex-column"  style="margin-left: -20px;"> 
 								<div class="flex text-medium">
 									<label class="switch">
@@ -427,8 +425,6 @@
 								</div>
 								</div>
 							
-								
-						
 								<p class="text-ssmall "><em>*Peringatan terpadu adalah peringatan yang menunjukkan titik lokasi dimana telah terindikasi 
 									terjadi perubahan tutupan yang terekam melalui tangkapan citra satelit. 
 								</em></p>
@@ -478,19 +474,17 @@
 		crossorigin=""></script>
 	<script src="js/leaflet-sidepanel.min.js"></script>
 	<script src="js/L.switchBasemap.js"></script>
-
-
+	<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
+	<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.js"></script>
 	<script src="https://github.com/ellipsis-drive/ellipsis-js-util/releases/download/1.1.0/ellipsis-js-util-1.1.0.js"></script>
 	<script src="https://github.com/ellipsis-drive/leaflet-package/releases/download/3.1.0/leaflet-ellipsis-3.1.0.js"></script>
-	<script src="data/kph_point.js"></script>
-	<script src="data/adm_kabkota_0.js"></script>
-	<script src="data/adm_kec_1.js"></script>
-	<script src="data/kph_2.js"></script>
-	<script src="data/FungsiKawasan_1.js"></script>
-	<script>
+	<script src="data/wp_kph.js"></script>
+	<script src="data/wp_hd.js"></script>
+	<script src="data/wp_hkm.js"></script>
+	<script src="data/wp_htr.js"></script>
+	<script src="data/kk_wp.js"></script>
 	
-		
-
+	<script>
 		const map = L.map("map", {
 			zoomControl: false
 		}).setView([-4.917867, 105.020628], 8);
@@ -503,8 +497,13 @@
 		}).addTo(map);
 		L.basemapsSwitcher([
 		{
-			layer: L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: ''
+			layer: L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+			attribution: '',
+			maxZoom: 18,
+			id: 'mapbox/streets-v11',
+        	tileSize: 512,
+        	zoomOffset: -1,
+        	accessToken: 'pk.eyJ1IjoiZHV0Y2hqZWxseSIsImEiOiJja3Y0MXhsajc0ZHE3Mm5zNzhucTJiZXhmIn0.7UQPvzDakKqhRAUrUEQmxg'
 			}).addTo(map), //DEFAULT MAP
 			icon: './assets/images/img1.png',
 			name: ''
@@ -526,7 +525,6 @@
 		},
 		], { position: 'bottomleft' }).addTo(map);
 
-		
 		var adm_kabkota = L.tileLayer.wms('https://aws.simontini.id/geoserver/wms', {
         layers: 'administrative_boundaries',
         transparent: true,
@@ -543,8 +541,6 @@
         }
    		});
 				
-
-
 		var fungsi_kawasan = L.tileLayer.wms('https://aws.simontini.id/geoserver/wms', {
         layers: 'simontini:Forest_estate_adm',
         transparent: true,
@@ -560,8 +556,17 @@
         }
    		});
 
-
-		
+		// var url = 'https://api.ellipsis-drive.com/v3/ogc/mvt/ec1b03ed-b0e8-400d-9839-f59f2a539e20/{z}/{x}/{y}?timestampId=fcda79f4-969e-4bcc-b164-4c18b96efe97&token=epat_pNTavio6Ow65qj3ggPpT3hvWSDKGMmDOX3HDDBm31x4ndGg0CV8bb3TVPY3ixj8D';
+		// var kph = L.vectorGrid.protobuf(url);
+		// $('#kph:checkbox').on('change', function() {
+        // var checkbox = $(this);
+        // // toggle the layer
+        // if ($(checkbox).is(':checked')) {
+        //     map.addLayer(kph);
+        // } else {
+        //     map.removeLayer(kph);
+        // }
+   		// });
 
 		var hcs_forest = L.tileLayer('https://api.ellipsis-drive.com/v3/path/40f37759-d00d-49a8-afa0-5271118668fe/raster/timestamp/47db79b2-25bd-4693-a555-090b01d17596/tile/{z}/{x}/{y}?style=5112e188-cece-4eca-9a71-0ce02a44b11d&token=epat_DXqmh8q0t5Gzr8ge9xnjQBN5cDyRVGBuzRSLwPc0m0WumJ3KFcehrOFbgtkEfkIJ', {
 			attribution: ''
@@ -576,21 +581,19 @@
         }
    		});
 
-		   var kphIcon = L.icon({
-              iconUrl: "data/kphicon.svg",
-            
-          
-              iconSize:     [50, 50], // size of the icon
-              popupAnchor:  [-3, -3] // point from which the popup should open relative to the iconAnchor
-              });
+		var kphIcon = L.icon({
+        	iconUrl: "data/kphicon.svg",
+            iconSize:     [40, 40], // size of the icon
+            popupAnchor:  [-3, -3] // point from which the popup should open relative to the iconAnchor
+            });
 
-		var kph = L.geoJSON(kph_json, {
+		var kph = L.geoJSON(wpkph_json, {
 		pointToLayer: function (feature, latlng) {
 		feature.properties.myKey = feature.properties.JENIS_KPH + ', ' + feature.properties.ORGANISASI + ', ' + feature.properties.UNIT_KPH
     	return L.marker(latlng, {icon: kphIcon})
 		},
 		onEachFeature: function(feature, layer){
-            layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi:</b>"+ feature.properties.ORGANISASI);
+            layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
         }
     	});
 		$('#kph:checkbox').on('change', function() {
@@ -603,8 +606,91 @@
         }
    		});
 
+		   var psIcon = L.icon({
+        	iconUrl: "data/swapetaicon.svg",
+            iconSize:     [20, 20], // size of the icon
+            popupAnchor:  [-3, 0] // point from which the popup should open relative to the iconAnchor
+            });
+
+		var hkm = L.geoJSON(wphkm_json, {
+		pointToLayer: function (feature, latlng) {
+		feature.properties.myKey = feature.properties.SKEMA + ', ' + feature.properties.LEMBAGA 
+    	return L.marker(latlng, {icon: psIcon})
+		},
+		onEachFeature: function(feature, layer){
+            layer.bindPopup("<b>Skema PS: </b>" + feature.properties.SKEMA + '<br>' + "<b>Lembaga: </b>"+ feature.properties.LEMBAGA);
+        }
+    	});
+		$('#ps_hkm:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(hkm);
+        } else {
+            map.removeLayer(hkm);
+        }
+   		});
+
+		
+		   var hd = L.geoJSON(wphd_json, {
+		pointToLayer: function (feature, latlng) {
+		feature.properties.myKey = feature.properties.SKEMA + ', ' + feature.properties.LEMBAGA 
+    	return L.marker(latlng, {icon: psIcon})
+		},
+		onEachFeature: function(feature, layer){
+            layer.bindPopup("<b>Skema PS: </b>" + feature.properties.SKEMA + '<br>' + "<b>Lembaga: </b>"+ feature.properties.LEMBAGA);
+        }
+    	});
+		$('#ps_hd:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(hd);
+        } else {
+            map.removeLayer(hd);
+        }
+   		});
+
+		   var htr = L.geoJSON(wphtr_json, {
+		pointToLayer: function (feature, latlng) {
+		feature.properties.myKey = feature.properties.SKEMA + ', ' + feature.properties.LEMBAGA 
+    	return L.marker(latlng, {icon: psIcon})
+		},
+		onEachFeature: function(feature, layer){
+            layer.bindPopup("<b>Skema PS: </b>" + feature.properties.SKEMA + '<br>' + "<b>Lembaga: </b>"+ feature.properties.LEMBAGA);
+        }
+    	});
+		$('#ps_htr:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(htr);
+        } else {
+            map.removeLayer(htr);
+        }
+   		});
+
+		var kk = L.geoJSON(kkwp_json, {
+		pointToLayer: function (feature, latlng) {
+		feature.properties.myKey = feature.properties.SKEMA + ', ' + feature.properties.LEMBAGA 
+    	return L.marker(latlng, {icon: psIcon})
+		},
+		onEachFeature: function(feature, layer){
+            layer.bindPopup("<b>Skema PS: </b>" + feature.properties.SKEMA + '<br>' + "<b>Lembaga: </b>"+ feature.properties.LEMBAGA);
+        }
+    	});
+		$('#ps_kk:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(kk);
+        } else {
+            map.removeLayer(kk);
+        }
+   		});
 
 
+		
 		const sidepanelLeft = L.control.sidepanel('mySidepanelLeft', {
 			tabsPosition: 'left',
 			startTab: 'tab-5'
@@ -616,18 +702,7 @@
 			darkMode: true,
 			startTab: 2
 		}).addTo(map);
-
-
-		
-
-		
-		
 		
 	</script>
-	<script>
-		
-	</script>
-
 </body>
-
 </html>
