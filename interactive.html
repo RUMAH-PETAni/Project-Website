@@ -239,7 +239,12 @@
 					
 							<p class="text-ssmall">[Sumber data : webgis KLHK]</em></p>
 							<hr>
-							
+							<div class="flex text-medium">
+								<label class="switch">
+								  <input type="checkbox">
+								  <span class="slider2 round"></span>
+								</label>
+								<span>*Update Foto Udara </span>
 							<div class="flex text-medium">
 							  <label class="switch">
 								<input type="checkbox">
@@ -247,13 +252,6 @@
 							  </label>
 							  <span>*Lahan Andil Garapan</span>
 							</div>
-
-							<div class="flex text-medium">
-								<label class="switch">
-								  <input type="checkbox">
-								  <span class="slider2 round"></span>
-								</label>
-								<span>*Foto Udara </span>
 							<div class="flex text-medium">
 								<label class="switch">
 								  <input type="checkbox" id="fungsi_kawasan">
@@ -288,7 +286,7 @@
 								<p class="text-ssmall"><em>*Lapisan tidak tersedia untuk umum</em></p>
 							  </div>
 							  <hr>
-							  <br>
+							
 
 							  <p class="text-medium highlight-text">Indikatif Kelas Tutupan Hutan</p>
 							
@@ -311,13 +309,12 @@
 							  </div>						 
 								  <p class="text-ssmall">[Sumber data : Indicative High Carbon Stock Maps 2020]</p>
 								  <hr>
-								  <br>
 							
-							  <p class="text-medium highlight-text">Monitoring Deforestasi</p>
-							  
+							
+							  <p class="text-medium highlight-text">Monitoring Deforestasi <span>(on process development)</span></p>
 							  <div class="flex text-medium">
 							  <label class="switch">
-								  <input type="checkbox" id="def_21_22">
+								  <input type="checkbox" id="def_21_23">
 								  <span class="slider round"></span>
 								</label>
 								<span>Deforestasi 2021 s.d 2023</span>
@@ -325,9 +322,9 @@
 							  <div class="custom-legend noselect" style="width: 210px; margin-top: -5px; margin-left: 20px;" >
 								<div class="legend-scale2">
 								  <ul class="legend-labels">
-									<li><span style="background:red; opacity: 0.25;"></span>2021</li>
-									<li><span style="background:red; opacity: 0.5"></span>2022</li>
-									<li><span style="background:red; opacity: 0.75"></span>2023</li>
+									<li><span style="background:#73D8FF; "></span>2021</li>
+									<li><span style="background:#009CE0; "></span>2022</li>
+									<li><span style="background:#0062B1; "></span>2023</li>
 								  </ul>
 								</div>
 							  </div>		
@@ -338,42 +335,42 @@
 							  <div class="flex text-medium">
 							  <label class="switch">
 								<input type="checkbox" id="alert1_24">
-								<span class="slider round"></span>
+								<span class="slider2 round"></span>
 							  </label>
 							  <span>Januari</span>
 							</div>
 							  <div class="flex text-medium">
 								  <label class="switch">
 								  <input type="checkbox" id="alert2_24">
-								  <span class="slider round"></span>
+								  <span class="slider2 round"></span>
 								  </label>
 								  <span>Februari</span>
 							  </div>
 							  <div class="flex text-medium">
 								<label class="switch">
 								<input type="checkbox" id="alert3_24">
-								<span class="slider round"></span>
+								<span class="slider2 round"></span>
 								</label>
 								<span>Maret</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert4_24">
-									<span class="slider round"></span>
+									<span class="slider2 round"></span>
 									</label>
 									<span>April</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert5_24">
-									<span class="slider round"></span>
+									<span class="slider2 round"></span>
 									</label>
 									<span>Mei</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert6_24">
-									<span class="slider round"></span>
+									<span class="slider2 round"></span>
 									</label>
 									<span>Juni</span>
 								</div>
@@ -383,28 +380,28 @@
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert7_24">
-									<span class="slider round"></span>
+									<span class="slider2 round"></span>
 									</label>
 									<span>Juli</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert8_24">
-									<span class="slider round"></span>
+									<span class="slider2 round"></span>
 									</label>
 									<span>Agustus</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert9_24">
-									<span class="slider round"></span>
+									<span class="slider2 round"></span>
 									</label>
 									<span>September</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert10_24">
-									<span class="slider round"></span>
+									<span class="slider2 round"></span>
 									</label>
 									<span>Oktober</span>
 								</div>
@@ -429,8 +426,8 @@
 									terjadi perubahan tutupan yang terekam melalui tangkapan citra satelit. 
 								</em></p>
 								  <p class="text-ssmall ">[Sumber data : Global Forest Watch | Data deforestasi dan peringatan terpadu yang ditampilkan pada peta interaktif
-									telah dimodifikasi, dengan hanya menampilkan data geolokasi dengan kriteria (luas minimum 0.5 ha, tingkat kepastian tinggi) 
-									yang terjadi pada kelas indikatif tutupan hutan yang berada dalam status fungsi kawasan hutan]</p>
+									telah dimodifikasi, dengan hanya menampilkan data geolokasi dengan kriteria (luas minimum 0.5 ha dan
+									berada pada kelas indikatif tutupan hutan)</p>
 								
 						</div>
 						<div class="sidepanel-tab-content" data-tab-content="tab-2">
@@ -474,6 +471,7 @@
 		crossorigin=""></script>
 	<script src="js/leaflet-sidepanel.min.js"></script>
 	<script src="js/L.switchBasemap.js"></script>
+	<script src="js/leaflet-bing-layer.js"></script>
 	<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
 	<script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.js"></script>
 	<script src="https://github.com/ellipsis-drive/ellipsis-js-util/releases/download/1.1.0/ellipsis-js-util-1.1.0.js"></script>
@@ -495,6 +493,7 @@
 		L.control.zoom({
 			position: 'bottomright'
 		}).addTo(map);
+		var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L'
 		L.basemapsSwitcher([
 		{
 			layer: L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -509,10 +508,11 @@
 			name: ''
 		},
 		{
-			layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png',{
-			detectRetina: true,
-			attribution: ''
-			}),
+			// layer: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png',{
+			layer:	L.tileLayer.bing(BING_KEY),
+			// detectRetina: true,
+			// attribution: ''z
+			// }),
 			icon: './assets/images/img2.png',
 			name: ''
 		},
@@ -540,7 +540,8 @@
             map.removeLayer(adm_kabkota);
         }
    		});
-				
+			
+
 		var fungsi_kawasan = L.tileLayer.wms('https://aws.simontini.id/geoserver/wms', {
         layers: 'simontini:Forest_estate_adm',
         transparent: true,
@@ -568,7 +569,7 @@
         // }
    		// });
 
-		var hcs_forest = L.tileLayer('https://api.ellipsis-drive.com/v3/path/40f37759-d00d-49a8-afa0-5271118668fe/raster/timestamp/47db79b2-25bd-4693-a555-090b01d17596/tile/{z}/{x}/{y}?style=5112e188-cece-4eca-9a71-0ce02a44b11d&token=epat_DXqmh8q0t5Gzr8ge9xnjQBN5cDyRVGBuzRSLwPc0m0WumJ3KFcehrOFbgtkEfkIJ', {
+		var hcs_forest = L.tileLayer('https://api.ellipsis-drive.com/v3/path/40f37759-d00d-49a8-afa0-5271118668fe/raster/timestamp/47db79b2-25bd-4693-a555-090b01d17596/tile/{z}/{x}/{y}?style=5112e188-cece-4eca-9a71-0ce02a44b11d&token=epat_OhrhPEYs0koLJvyEVjKertQc3YxbaFLweCmGLcxXs6Zjjqpvrf1wtX0hxePHINdN', {
 			attribution: ''
 			});
 		$('#hcs_forest:checkbox').on('change', function() {
@@ -581,8 +582,11 @@
         }
    		});
 
+		   
+
+
 		var kphIcon = L.icon({
-        	iconUrl: "data/kphicon.svg",
+        	iconUrl: "data/kphicon.png",
             iconSize:     [40, 40], // size of the icon
             popupAnchor:  [-3, -3] // point from which the popup should open relative to the iconAnchor
             });
@@ -607,7 +611,7 @@
    		});
 
 		   var psIcon = L.icon({
-        	iconUrl: "data/swapetaicon.svg",
+        	iconUrl: "data/psicon.png",
             iconSize:     [20, 20], // size of the icon
             popupAnchor:  [-3, 0] // point from which the popup should open relative to the iconAnchor
             });
@@ -688,6 +692,23 @@
             map.removeLayer(kk);
         }
    		});
+
+	
+		var def = L.tileLayer('https://api.ellipsis-drive.com/v3/path/71f0cada-82cb-4fa8-97e7-29b7a40f5415/raster/timestamp/8e4edcc7-8e86-4358-8bc7-cfa3c3a8df03/tile/{z}/{x}/{y}?style=4ec12f33-6b56-430d-bc8e-392d83696817&token=epat_hlnD5LP1Q6foP0du6P2TktJU3H7Q1fYEbZk3RDyGqENPNHp6qaPPunmN1te1FrcF', {
+		attribution: '',
+		zIndex: 9999
+		
+		});
+		$('#def_21_23:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(def);
+        } else {
+            map.removeLayer(def);
+        }
+   		});
+
 
 
 		
