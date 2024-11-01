@@ -97,6 +97,41 @@
 			color: #116600;
 			text-decoration: underline;
 		}
+		 /* CSS3 Animation for sizing svg icon */
+		 div.svg-icon > svg > path {
+          animation: pulse 3s infinite;
+          -webkit-animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+          0% {
+            stroke-width: 6;
+          }
+          45% {
+            stroke-width: 12;
+          }
+          100% {
+            stroke-width: 6;
+          }
+        }
+        @-webkit-keyframes pulse {
+          0% {
+            stroke-width: 6;
+          }
+          45% {
+            stroke-width: 12;
+          }
+          100% {
+            stroke-width: 6;
+          }
+        }
+
+        /* Marker offset */
+        .eq-svg {
+          margin-top: -12px;
+          margin-left: -12px;
+        }
+   
 	</style>
 </head>
 
@@ -335,42 +370,42 @@
 							  <div class="flex text-medium">
 							  <label class="switch">
 								<input type="checkbox" id="alert1_24">
-								<span class="slider2 round"></span>
+								<span class="slider round"></span>
 							  </label>
 							  <span>Januari</span>
 							</div>
 							  <div class="flex text-medium">
 								  <label class="switch">
 								  <input type="checkbox" id="alert2_24">
-								  <span class="slider2 round"></span>
+								  <span class="slider round"></span>
 								  </label>
 								  <span>Februari</span>
 							  </div>
 							  <div class="flex text-medium">
 								<label class="switch">
 								<input type="checkbox" id="alert3_24">
-								<span class="slider2 round"></span>
+								<span class="slider round"></span>
 								</label>
 								<span>Maret</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert4_24">
-									<span class="slider2 round"></span>
+									<span class="slider round"></span>
 									</label>
 									<span>April</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert5_24">
-									<span class="slider2 round"></span>
+									<span class="slider round"></span>
 									</label>
 									<span>Mei</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert6_24">
-									<span class="slider2 round"></span>
+									<span class="slider round"></span>
 									</label>
 									<span>Juni</span>
 								</div>
@@ -380,28 +415,28 @@
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert7_24">
-									<span class="slider2 round"></span>
+									<span class="slider round"></span>
 									</label>
 									<span>Juli</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert8_24">
-									<span class="slider2 round"></span>
+									<span class="slider round"></span>
 									</label>
 									<span>Agustus</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert9_24">
-									<span class="slider2 round"></span>
+									<span class="slider round"></span>
 									</label>
 									<span>September</span>
 								</div>
 								<div class="flex text-medium">
 									<label class="switch">
 									<input type="checkbox" id="alert10_24">
-									<span class="slider2 round"></span>
+									<span class="slider round"></span>
 									</label>
 									<span>Oktober</span>
 								</div>
@@ -426,7 +461,7 @@
 									terjadi perubahan tutupan yang terekam melalui tangkapan citra satelit. 
 								</em></p>
 								  <p class="text-ssmall ">[Sumber data : Global Forest Watch | Data deforestasi dan peringatan terpadu yang ditampilkan pada peta interaktif
-									telah dimodifikasi, dengan hanya menampilkan data geolokasi dengan kriteria (luas minimum 0.5 ha dan
+									telah dimodifikasi, dengan hanya menampilkan data geolokasi dengan kriteria (agregat luas minimum 0.5 ha dan
 									berada pada kelas indikatif tutupan hutan)</p>
 								
 						</div>
@@ -469,6 +504,7 @@
 	<!-- Scripts -->
 	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
 		crossorigin=""></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="js/leaflet-sidepanel.min.js"></script>
 	<script src="js/L.switchBasemap.js"></script>
 	<script src="js/leaflet-bing-layer.js"></script>
@@ -481,7 +517,16 @@
 	<script src="data/wp_hkm.js"></script>
 	<script src="data/wp_htr.js"></script>
 	<script src="data/kk_wp.js"></script>
-	
+	<script src="data/jan.js"></script>
+	<script src="data/feb.js"></script>
+	<script src="data/mar.js"></script>
+	<script src="data/apr.js"></script>
+	<script src="data/mei.js"></script>
+	<script src="data/jun.js"></script>
+	<script src="data/jul.js"></script>
+	<script src="data/agu.js"></script>
+	<script src="data/sep.js"></script>
+	<script src="data/okt.js"></script>
 	<script>
 		const map = L.map("map", {
 			zoomControl: false
@@ -709,8 +754,182 @@
         }
    		});
 
+		var iconColor = '#f72d3f';
+		var svgPath = 'M23.963,20.834L17.5,9.64c-0.825-1.429-2.175-1.429-3,0L8.037,20.834c-0.825,1.429-0.15,2.598,1.5,2.598h12.926C24.113,23.432,24.788,22.263,23.963,20.834z';
+		var svgIcon = L.divIcon({
+		className: 'svg-icon',
+		html: '<svg class="eq-svg" width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="none" stroke="' + iconColor + '" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="' + svgPath + '"></path></svg>'
+		});
 
+		var jan = L.geoJson(jan_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert1_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(jan);
+        } else {
+            map.removeLayer(jan);
+        }
+   		});
 
+		   var feb = L.geoJson(feb_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert2_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(feb);
+        } else {
+            map.removeLayer(feb);
+        }
+   		});
+
+		   var mar = L.geoJson(mar_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert3_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(mar);
+        } else {
+            map.removeLayer(mar);
+        }
+   		});
+
+		   var apr = L.geoJson(apr_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert4_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(apr);
+        } else {
+            map.removeLayer(apr);
+        }
+   		});
+
+		   var mei = L.geoJson(mei_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert5_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(mei);
+        } else {
+            map.removeLayer(mei);
+        }
+   		});
+
+		   var jun = L.geoJson(jun_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert6_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(jun);
+        } else {
+            map.removeLayer(jun);
+        }
+   		});
+
+		   var jul = L.geoJson(jul_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert7_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(jul);
+        } else {
+            map.removeLayer(jul);
+        }
+   		});
+
+		   var agu = L.geoJson(agu_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert8_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(agu);
+        } else {
+            map.removeLayer(agu);
+        }
+   		});
+
+		   var sep = L.geoJson(sep_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert9_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(sep);
+        } else {
+            map.removeLayer(sep);
+        }
+   		});
+
+		   var okt = L.geoJson(okt_json, {
+			onEachFeature: function (feature, layer) {
+			// Set the default style into layer
+			layer.setIcon(svgIcon);
+			// layer.bindPopup("<b>Jenis KPH: </b>" + feature.properties.JENIS_KPH + '<br>' + "<b>Organisasi: </b>"+ feature.properties.ORGANISASI);
+        }
+     	 });
+		  $('#alert10_24:checkbox').on('change', function() {
+        var checkbox = $(this);
+        // toggle the layer
+        if ($(checkbox).is(':checked')) {
+            map.addLayer(okt);
+        } else {
+            map.removeLayer(okt);
+        }
+   		});
 		
 		const sidepanelLeft = L.control.sidepanel('mySidepanelLeft', {
 			tabsPosition: 'left',
