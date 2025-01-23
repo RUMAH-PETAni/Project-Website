@@ -454,11 +454,9 @@ hr {
   overflow: auto;
   border: 1px solid #666666;
   display: grid;
-  width: 90%;
-
+  width: fit-content;
   margin: 15px 0;
 }
-/width: fit-content;/
 
 .scrollable-image-container.center {
   margin-left: auto;
