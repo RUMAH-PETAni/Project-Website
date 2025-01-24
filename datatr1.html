@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>RUMAH PETAni/TR1 data</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/widgets.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/parallax.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="assets/icon.png">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/animateIfInView.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(142, 202, 230) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="custom-menu-container" class="custom-menu-container">
+    <div class="menu">
+      <div class="menu-table flex-row-space-between">
+        <div class="logo flex-row-center">
+          <a href="index.html">
+            <img src="assets/logo.svg">
+          </a>
+        </div>
+            <div class="custom-dropdown2 large">
+              <a  tabindex="0"><span>&nbsp Menu</span></a>
+              <div>
+                <a href="#"></a>
+                <a href="index.html">Beranda</a>
+                <a href="activity.html">Aktifitas</a>
+                <a class="highlight-text" href="gallery.html">Galeri</a>
+                
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("custom-menu-container").style.top = "0";
+      } else {
+        document.getElementById("custom-menu-container").style.top = "-60px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+
+    <!-------------------------------------------------------------------------------------------->
+  <div class="content-container">
+    <!-------------------------------------------------------------------------------------------->
+    <!--Start Header-->
+    <div class="content">
+      <div class="content-table flex-column">
+        
+        <div class="flex-row" style="padding-top: 50px;">
+          <div class="flex-item flex-item-stretch">
+            <iframe width="100%" height="500px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSktFtBTZ40Ya3HunuM8vHgs_VkBgaExLu0oYDnanOViMgU9Z6uFljKzIn6uLcWLLbKjaMLZ3uAvjsC/pubhtml?gid=1105688319&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+          </div>
+        </div>
+        <div class="flex-row" style="padding-top: 50px; ">
+          <div class="flex-item flex-item-stretch flex-column">
+            <a class="custom-button-flat stretch-on-mobile" href="tr1.html" >
+              <img src="img/back.png"><span> Kembali</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+ 
+    
+    <!-------------------------------------------------------------------------------------------->
+    <div class="custom-banner">
+      <div class="banner-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <marquee width="100%" direction="left" height="100%">
+              <h2 class="add-top-margin-small">&middot karena kami percaya bahwa #PETAni adalah Penjaga Tatanan Negara Indonesia &middot
+              </h2>
+            </marquee>
+            <p class="text text-small text-italic text-justify">
+              <span class="highlight-text">Disclaimer</span>: platform digital ini dibuat untuk kepentingan publikasi dengan tujuan membuat, mengumpulkan, menyimpan serta menyediakan data dan informasi 
+              guna mendukung keberlanjutan pengelolaan potensi sumber daya alam untuk masa depan yang lebih baik.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="custom-banner2">
+        <div class="banner-table flex-column">
+          <div class="flex-row">
+            <div class="flex-item flex-column">
+              <h3>Hubungi kami</h3>
+              <p class="text add-bottom-margin-large text-justify">
+                Jika anda memiliki pertanyaan mengenai komunitas dan kegiatan kami, ataupun ingin berbagi ide, gagasan dan pemikiran anda kepada kami,     
+                jangan ragu untuk menghubungi kami melalui rincian yang disediakan di bawah ini untuk mendapatkan informasi lebih lanjut. 
+                </br>&nbsp
+                </br>Email: rmh.petani@gmail.com
+                <!-- </br>Telp: +62-813-6783-2726 -->
+                </br><a class="break-long-url text-small" target="_blank" href="https://maps.app.goo.gl/cL5XgvDKimXti3eN8">https://maps.app.goo.gl/cL5XgvDKimXti3eN8</a>
+              </p>
+              <div class="footer-bar">
+                <div class="group">
+                  <a class="footer-item1" href="mailto:rmh.petani@gmail.com" target="_blank">
+                    <button class="custom-button-flat"><img src="img/mail.png"></button>
+                  </a>
+                  <!-- <a class="footer-item1"href="https://wa.me/6281367832726" target="_blank">
+                    <button class="custom-button-flat"><img src="img/whatsapp.png"></button>
+                  </a> -->
+                  <a class="footer-item1"href="https://maps.app.goo.gl/cL5XgvDKimXti3eN8" target="_blank">
+                    <button class="custom-button-flat"><img src="img/pin.png"></button>
+                  </a>
+                  <a class="footer-item1">
+                    <button id="share-btn" title="Bagikan" class="custom-button-flat"><img src="img/share.png"></button>
+                  </a>
+                </div>
+                <div class="group">
+                  <div class="footer-item2">
+                    <a class="custom-image-button" href="empty2.html">
+                    <img src="img/google-play-badge.png" width="150">
+                    </a>
+                  </div>
+                </div>
+                <div id="share-dialog" title="Bagikan" data-role="none">
+                  <p>Salin tautan berikut untuk membagikan ke yang lainnya</p>
+                  <input id="share-url" class="custom-textbox" type="text" autofocus="autofocus" value="https://rumah-petani.github.io/Project-Website/" readonly>
+                  <p id="share-url-copy-prompt">Tautan telah disalin</p>
+                </div>
+              </div>
+              <hr>
+              <p class="text text-center">
+                © 2024 - RUMAH PETAni
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
