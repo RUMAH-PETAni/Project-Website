@@ -499,10 +499,25 @@ hr {
   display: flex;
 }
 
+.preview-image {
+  border-radius: 2px;
+  width: 100%;
+  margin: 15px 0;
+
+  user-select: none;
+  display: flex;
+  cursor: zoom-in;
+ 
+
+  transform-origin: 50% 50%;
+  transition: transform 0.2s ease-out;
+}
+
 
 .image.center {
   align-self: center;
 }
+
 
 .image img,
 .image video {
@@ -512,6 +527,10 @@ hr {
   display: table-cell;
   overflow: hidden;
   border-radius: 2px;
+}
+.preview-image.zoom{
+  cursor: zoom-out;
+  transform: scale(4);
 }
 
 .adaptive-image {
