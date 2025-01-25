@@ -456,10 +456,10 @@ h0a {
 }
 
 .img-box-kopi{
-  width: 250px;
-  height:250px;
+  width: 300px;
+  height:300px;
   margin:  auto;
-  border: 1px solid #000;
+
   border-radius: 9999px;
   background: url(images/kopi.jpeg);
   background-size: cover;
@@ -680,6 +680,40 @@ h0a {
   background-position: center;
 }
 
+.img-box-agro{
+  width: 150px;
+  height:150px;
+  margin: 10px;
+
+
+  background: url(images/durian.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform .2s;
+}
+
+.img-box-agro:nth-child(2){
+  background: url(images/pala.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box-agro:nth-child(3){
+  background: url(images/jengkol.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box-agro:nth-child(4){
+  background: url(images/kakao.webp);
+  background-size: cover;
+  background-position: center;
+}
+.img-box-agro:nth-child(5){
+  background: url(images/pisang.webp);
+  background-size: cover;
+  background-position: center;
+}
+
 
 .img-box4{
   width: 300px;
@@ -701,6 +735,18 @@ h0a {
   background-position: center;
   position: relative;
   transition: transform .2s;
+}
+
+.img-box-agro>p{
+  justify-items: center;
+  text-align: center;
+
+  font-size: 11px;
+  position: absolute;
+  margin-bottom: 2px;
+  left: 50px;
+  opacity: 0;
+  transition: bottom 0.5s, opacity 0s;
 }
 
 .img-box-ls1>p{
@@ -898,6 +944,11 @@ h0a {
   background-color: transparent;
   transform: scale(1.5);
 }
+.img-box-agro:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transform: scale(1.3);
+}
 .img-box4:hover{
   cursor: pointer;
   background-color: transparent;
@@ -908,6 +959,11 @@ h0a {
   cursor: pointer;
   background-color: transparent;
   transform: scale(1.2);
+}
+
+.img-box-agro:hover p{
+  opacity: 100;
+  bottom: -15px;
 }
 
 .img-box-ls1:hover p{
