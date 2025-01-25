@@ -454,6 +454,20 @@ h0a {
   position: relative;
   transition: transform .2s;
 }
+
+.img-box-kopi{
+  width: 250px;
+  height:250px;
+  margin:  auto;
+  border: 1px solid #000;
+  border-radius: 9999px;
+  background: url(images/kopi.jpeg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform .2s;
+}
+
 .img-box-ls1:nth-child(2){
   background: url(images/sahmi.png);
   background-size: cover;
@@ -817,6 +831,12 @@ h0a {
 .img-box0:hover{
   cursor: pointer;
   background-color: #e1e1e1;
+}
+
+.img-box-kopi:hover{
+  cursor: pointer;
+  background-color: #e1e1e1;
+  transform: scale(1.2);
 }
 
 .img-box-ls1:hover{
@@ -1203,3 +1223,4 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
