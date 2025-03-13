@@ -736,6 +736,16 @@ h0a {
   position: relative;
   transition: transform .2s;
 }
+.img-box6{
+  width: 300px;
+  height:300px;
+  margin: 0px;
+  background: url(images/insight.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform .2s;
+}
 
 .img-box-agro>p{
   justify-items: center;
@@ -960,6 +970,11 @@ h0a {
   background-color: transparent;
   transform: scale(1.2);
 }
+.img-box6:hover{
+  cursor: pointer;
+  background-color: transparent;
+  transform: scale(1.2);
+}
 
 .img-box-agro:hover p{
   opacity: 100;
@@ -1019,6 +1034,10 @@ h0a {
   bottom: -20px;
 }
 .img-box5:hover h3{
+  opacity: 100;
+  bottom: -20px;
+}
+.img-box6:hover h3{
   opacity: 100;
   bottom: -20px;
 }
